@@ -46,7 +46,8 @@ void packetInWrapper(int p_no, const unsigned char *packet, struct pcap_pkthdr *
 }
 
 void timeTickCallback(uint32_t upTime, const SimClockTime *cTime) {
-    serviceSwitch->logFlowActivity(upTime);
+    if (upTime%60 == 0)
+        serviceSwitch->logFlowActivity(upTime);
     if (upTime%3600 == 0)
         fprintf(stderr, "%06d\r",upTime/3600);
 }

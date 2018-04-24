@@ -30,9 +30,6 @@ void SwitchBox::packetIn(unsigned int pNo, const unsigned char *packet, struct p
     FlowRule *fMatch;
     pPcap::packet_meta *c_m;
 
-    if (pNo==617725){
-        debug("Reached point");
-    }
 
     mSysClock->setCurrentTime(&(header->ts));
 

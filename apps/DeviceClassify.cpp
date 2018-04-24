@@ -20,6 +20,8 @@ void DeviceClassify::pushInitialRules() {
         debug("Mac %d: %s",i,macList[i].c_str());
         initiateDeviceIdentificationRules(macList[i].c_str(),"14:cc:20:51:33:ea");
     }
+
+
 }
 
 ushort
@@ -36,7 +38,7 @@ int DeviceClassify::readMacList(const char *filePath, char_vec_t *macList) {
 
     std::ifstream inFile;
     char line[30];
-    std:string macAddress;
+    string macAddress;
 
     inFile.open(filePath);
     if (!inFile.is_open()) {
