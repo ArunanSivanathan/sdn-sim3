@@ -2,7 +2,7 @@ import csv
 from operator import itemgetter
 
 from statistics import mode
-from matplotlib import pyplot
+import matplotlib.pyplot as plt
 
 
 def extract_cols(file,cols):
@@ -41,16 +41,20 @@ def get_rows_by_value(data_list,col_index,value):
     return output_list
 
 def draw_histogram(values,bins=None,alpha=None):
-    n, bins, patches= pyplot.hist(values,bins,alpha=alpha)
-    print (patches)
-    pyplot.show()
+    n, bins, patches= plt.hist(values,bins,alpha=alpha,normed=True)
+    # plt.ylim([0, 1])
+    print (bins)
+    print (n)
+    plt.show()
 
 if __name__=="__main__":
-    bin_size=1024
+    bin_size=10
+    xlimit = 10*1024
 
-    training_data, training_colkeys = extract_cols('../merge_instances/training.csv', [95, -1])
-    training_filtered_row = get_rows_by_value(training_data, -1, 1)
+    training_data, training_colkeys = extract_cols('../merge_instances/testing-march.csv', [95, -1])
+    training_filtered_row = get_rows_by_value(training_data, -1, 12)
     training_attribute_values = training_filtered_row[0]
+    training_attribute_values = [x for x in training_attribute_values if x > 0]
 
     print('Attribute min:%d' % min(training_attribute_values))
     print('Attribute max:%d' % max(training_attribute_values))
@@ -58,7 +62,7 @@ if __name__=="__main__":
     print('Bin size:%dBytes'%bin_size)
     print('X Limit:%dBytes'%xlimit)
 
-    bins = range(min(training_attribute_values), max(training_attribute_values), bin_size)
+    bins = range(0, xlimit, bin_size)
     draw_histogram(training_filtered_row, bins)
     # print(filtered_rows)
 

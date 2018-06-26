@@ -11,6 +11,7 @@
 #include "controller.h"
 #include "DataLogger.h"
 #include "SimClock.h"
+#include "config.h"
 
 class DataLogger;
 class Controller;
@@ -34,7 +35,7 @@ public:
     Controller *mController;
     DataLogger *mDataLogger;
 
-    void logFlowActivity(uint32_t upTime);
+    void logFlowActivity(long upTime);
     void logSummary();
 
 private:

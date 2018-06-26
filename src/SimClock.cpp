@@ -41,12 +41,14 @@ uint32_t SimClock::setCurrentTime(SimClockTime newTime) {
 
     if (mCurrentTime > newTime) {//If wrong time Identified on packet
         log_err("Time went back in clock! That means you found a way for time travel!");
+        log_err("%l",newTime.getMSec());
 //        raise(SIGILL); //Signal Illegal Instruction
         return mUpTime;
     }
 
     if (mUpTime > mMaxClockDuration) {//If wrong time Identified on packet
         log_err("Clock was working for too long time!");
+        log_err("%l",newTime.getMSec());
         raise(SIGILL); //Signal Illegal Instruction
     }
 

@@ -1,5 +1,4 @@
 import os, csv
-import subprocess
 import re
 WEKA_CLASSPATH = "/Applications/weka-3-8-0-oracle-jvm.app/Contents/Java/weka.jar"
 
@@ -87,32 +86,71 @@ def remove_range(inFile, outFile, indexRange):
     os.system(command)
 
 
-def classify_Randomforest(trainFile, testFile, outFile, removeAttributes):
+def classify_Randomforest_evaluation(trainFile, testFile, outFile, removeAttributes=''):
     # weka.classifiers.meta.FilteredClassifier -F "weka.filters.unsupervised.attribute.Remove -R 8,9" -W weka.classifiers.misc.InputMappedClassifier -- -I -trim -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
 
-    command = "java -cp " + WEKA_CLASSPATH + \
-              " weka.classifiers.meta.FilteredClassifier" + \
-              " -t " + trainFile + \
-              " -T " + testFile + \
-              " -classifications \"weka.classifiers.evaluation.output.prediction.CSV -file " + outFile + " -suppress\"" + \
-              " -F \"weka.filters.unsupervised.attribute.Remove -R " + removeAttributes + "\"" \
-                                                                                          " -W weka.classifiers.misc.InputMappedClassifier -- -I -trim " + \
-              " -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1"
+    if removeAttributes!="":
+        command = "java -cp " + WEKA_CLASSPATH + \
+                  " weka.classifiers.meta.FilteredClassifier" + \
+                  " -t " + trainFile + \
+                  " -T " + testFile + \
+                  " -F \"weka.filters.unsupervised.attribute.Remove -R " + removeAttributes + "\"" \
+                  " -W weka.classifiers.misc.InputMappedClassifier -- -I -trim " + \
+                  " -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 >" + outFile
+
+    else:
+        command = "java -cp " + WEKA_CLASSPATH + \
+                  " weka.classifiers.misc.InputMappedClassifier -I -trim" + \
+                  " -t " + trainFile + \
+                  " -T " + testFile + \
+                  " -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 " + \
+                  " >" + outFile
+
+
     print(command)
     os.system(command)
 
-def classify_Randomforest_evaluation(trainFile, testFile, outFile, removeAttributes):
-    # weka.classifiers.meta.FilteredClassifier -F "weka.filters.unsupervised.attribute.Remove -R 8,9" -W weka.classifiers.misc.InputMappedClassifier -- -I -trim -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+def Randomforest_predict_instances(trainFile, testFile, prediction_output, removeAttributes=''):
+    if removeAttributes!="":
+        command = "java -cp " + WEKA_CLASSPATH
+        command += " weka.classifiers.meta.FilteredClassifier"
+        command += " -t " + trainFile
+        command += " -T " + testFile
+        command += " -classifications \"weka.classifiers.evaluation.output.prediction.CSV -p first -file " + prediction_output + "\""
+        command += " -F \"weka.filters.unsupervised.attribute.Remove -R " + removeAttributes + "\""
+        command += " -W weka.classifiers.misc.InputMappedClassifier -- -I -trim "
+        command += " -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 "
 
-    command = "java -cp " + WEKA_CLASSPATH + \
-              " weka.classifiers.meta.FilteredClassifier" + \
-              " -t " + trainFile + \
-              " -T " + testFile + \
-              " -F \"weka.filters.unsupervised.attribute.Remove -R " + removeAttributes + "\"" \
-              " -W weka.classifiers.misc.InputMappedClassifier -- -I -trim " + \
-              " -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 >" + outFile
+    else:
+        command = "java -cp " + WEKA_CLASSPATH
+        command += " weka.classifiers.misc.InputMappedClassifier -I -trim"
+        command += " -t " + trainFile
+        command += " -T " + testFile
+        command += " -classifications \"weka.classifiers.evaluation.output.prediction.CSV -p first -file " + prediction_output + "\""
+        command += " -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 "
+
     print(command)
     os.system(command)
+
+def Randomforest_model_generation(train_file,model_out_file):
+    command = "java -cp " + WEKA_CLASSPATH + \
+                  " weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 " + \
+                  " -t " + train_file + \
+                  " -d " + model_out_file
+    print(command)
+    os.system(command)
+
+def Randomforest_load_and_test(model_file, testFile, outFile):
+    command = "java -cp " + WEKA_CLASSPATH + \
+                  " weka.classifiers.misc.InputMappedClassifier -I -trim" + \
+                  " -d " + model_file + \
+                  " -t " + testFile + \
+                  " -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 " + \
+                  " >" + outFile
+    print(command)
+    os.system(command)
+
+
 
 def findAccuracyRRSE(evauation_file):
 
@@ -157,5 +195,13 @@ def get_cfs_subsetevaluation(trainFile, outFile, removeAttributes = None):
               " -s \"weka.attributeSelection.BestFirst -D 1 -N 5\"" + \
               " -i " + trainFile
     # " -E weka.attributeSelection.InfoGainAttributeEval " + \
+    print(command)
+    os.system(command)
+
+def remove_attributes(inFile,outFile,attributes):
+    command = "java  -cp " + WEKA_CLASSPATH + \
+              " weka.filters.unsupervised.attribute.Remove -R " + attributes + \
+              " -i " + inFile + \
+              " -o " + outFile
     print(command)
     os.system(command)

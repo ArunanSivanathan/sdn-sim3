@@ -121,7 +121,7 @@ SwitchBox::takeaction(unsigned long pid, FlowRule *c_f, struct pPcap::packet_met
     return 0;
 }
 
-void SwitchBox::logFlowActivity(uint32_t upTime) {
+void SwitchBox::logFlowActivity(long upTime) {
     FlowRule *c_f;
     unsigned long flowUse;
 
@@ -139,8 +139,8 @@ void SwitchBox::logFlowActivity(uint32_t upTime) {
         c_f->setMileStone();
         c_f = c_f->rule_next;
     }
-    mDataLogger->log_flowCountuse->writeLine("\n", upTime);
-    mDataLogger->log_flowRateuse->writeLine("\n", upTime);
+    mDataLogger->log_flowCountuse->writeLine("\n");
+    mDataLogger->log_flowRateuse->writeLine("\n");
 }
 
 void SwitchBox::logFlowInformations() {
@@ -195,7 +195,8 @@ SwitchBox::~SwitchBox() {
     FlowRule *p_f;
 
     //Flush all flowlog by ticking the timer to next frame
-    logFlowActivity(mSysClock->getUpTime() + 1);
+    if (FLUSH_END_LAST_SECONDS==true)
+        logFlowActivity(mSysClock->getUpTime() + 1);
     logFlowInformations();
     logSummary();
 

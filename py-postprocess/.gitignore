@@ -1,0 +1,4 @@
+**/instances/
+**/*.arff
+**/*.txt
+**/*.model

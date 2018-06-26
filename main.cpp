@@ -3,6 +3,7 @@
 #include <pcapParser.h>
 #include <SwitchBox.h>
 #include "apps/apps.h"
+#include "config.h"
 
 void displayBanner();
 void packetInWrapper(int p_no, const unsigned char *packet, struct pcap_pkthdr *header);
@@ -46,8 +47,13 @@ void packetInWrapper(int p_no, const unsigned char *packet, struct pcap_pkthdr *
 }
 
 void timeTickCallback(uint32_t upTime, const SimClockTime *cTime) {
-    if (upTime%60 == 0)
-        serviceSwitch->logFlowActivity(upTime);
+    if (upTime%FLOW_USAGE_LOG_PERIOD == 0) {
+        if (FLOW_ACTIVITY_WITH_EPOCH_TIME)
+            serviceSwitch->logFlowActivity(cTime->getMSec());
+        else
+            serviceSwitch->logFlowActivity(upTime);
+
+    }
     if (upTime%3600 == 0)
         fprintf(stderr, "%06d\r",upTime/3600);
 }

@@ -71,7 +71,7 @@ FlowRule* FlowRule::findMatchingRule(FlowRule *header, struct pPcap::packet_meta
 
 
 u_short FlowRule::compRule(struct pPcap::packet_meta *m_rule, struct pPcap::packet_meta *m_packet){
-
+//todo: IP masking
     if( m_rule->ether_dhost!=NULL && pPcap::compMac(m_rule->ether_dhost,m_packet->ether_dhost)==0)
     {
         //debug("dhost rule mismatch");

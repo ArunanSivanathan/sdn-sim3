@@ -9,7 +9,7 @@ include_directories ("${PROJECT_SOURCE_DIR}/include")
 
 set(HEADER_FILES include/SwitchBox.h src/pcapParser.cpp include/pcapParser.h src/logistics.cpp include/logistics.h include/Flows.h include/config.h include/controller.h include/DataLogger.h include/SimClock.h)
 set(SOURCE_FILES main.cpp src/SwitchBox.cpp src/pcapParser.cpp src/logistics.cpp src/Flows.cpp src/controller.cpp src/DataLogger.cpp src/SimClock.cpp)
-set(APPS apps/DeviceClassify.cpp apps/DeviceClassify.h apps/apps.cpp apps/apps.h)
+set(APPS apps/DeviceClassify.cpp apps/DeviceClassify.h apps/apps.cpp apps/apps.h apps/SimpleStaticRules.cpp apps/SimpleStaticRules.h)
 
 add_executable(sdn_sim3 ${SOURCE_FILES} ${HEADER_FILES} ${APPS})
 

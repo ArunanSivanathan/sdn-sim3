@@ -59,7 +59,17 @@ u_char *pPcap::str2mac(const char *macStr) {
 }
 
 char *pPcap::ip2str(struct in_addr ip) {
-    return inet_ntoa(ip);
+    char *ip_str;
+    ip_str = (char *) malloc(sizeof(char) * 16);
+
+    char* ipaddress = inet_ntoa(ip);
+    /* convert to uint8_t */
+    int i;
+
+    for (i = 0; i < 16; i++)
+        ip_str[i] = (u_char) ipaddress[i];
+
+    return ip_str;
 }
 
 struct in_addr pPcap::str2ip(const char *ipStr) {

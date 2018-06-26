@@ -18,6 +18,7 @@ class OFVolumetricAttributeWriter:
         self.device_class = dev_class
         self.instance_interval = 1
         self.counter = 0
+        self.last_known_time = 0
 
         self.fid = open(filename, 'w')
         self.csv_writer = csv.writer(self.fid)
@@ -31,17 +32,19 @@ class OFVolumetricAttributeWriter:
 
     def __write_headers__(self):
         headers = []
+        headers.append('tid')
         for e_a in self.attributes.keys():
             headers.append(e_a)
 
         headers.append('device_label')
         self.csv_writer.writerow(headers)
 
-    def put_reading(self, line_rate, line_counter):
+    def put_reading(self, tid,line_rate, line_counter):
         if self.flow_info_dict is None:
             raise AttributeWriterException('flow_info_dict is None')
 
         self.counter = self.counter + 1
+        self.last_known_time = tid
 
         for attribute_name in self.attributes.keys():
             flow_name = self.attributes[attribute_name]['flow_col_name']
@@ -55,9 +58,9 @@ class OFVolumetricAttributeWriter:
             self.attributes[attribute_name]['buffer'].append(val)
 
         if (self.counter % self.instance_interval) == 0:
-            self.write_row()
+            self.write_row(tid)
 
-    def write_row(self):
+    def write_row(self,tid):
         if self.device_class is None:
             raise AttributeWriterException('device class is None')
 
@@ -68,8 +71,9 @@ class OFVolumetricAttributeWriter:
             attribute_vector[i] = sum(self.attributes[attribute_name]['buffer'])
 
         if sum(attribute_vector[0:-1]) != 0:  # if it is not an empty instance
+            attribute_vector.insert(0, tid)
             self.csv_writer.writerow(attribute_vector)
 
     def __del__(self):
-        self.write_row()
+        self.write_row(self.last_known_time)
         self.fid.close()

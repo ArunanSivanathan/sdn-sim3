@@ -31,6 +31,12 @@ DEVICE_DICT = [
     {'mac': '00:24:e4:44:68:44', 'class': '28', 'name': 'Withings Scale'},
     {'mac': '00:24:e4:1b:6f:96', 'class': '28', 'name': 'Withings Scale'},
     {'mac': '00:24:e4:11:57:d7', 'class': '28', 'name': 'Withings Scale'},
+    {'mac': '40:f3:08:ff:1e:da', 'class': '99', 'name': 'Non IoT'},
+    {'mac': '74:2f:68:81:69:42', 'class': '99', 'name': 'Non IoT'},
+    {'mac': 'ac:bc:32:d4:6f:2f', 'class': '99', 'name': 'Non IoT'},
+    {'mac': 'b4:ce:f6:a7:a3:c2', 'class': '99', 'name': 'Non IoT'},
+    {'mac': 'd0:a6:37:df:a1:e1', 'class': '99', 'name': 'Non IoT'},
+    {'mac': 'f4:5c:89:93:cc:85', 'class': '99', 'name': 'Non IoT'},
 ]
 
 INSTANCE_INTERVAL = 15

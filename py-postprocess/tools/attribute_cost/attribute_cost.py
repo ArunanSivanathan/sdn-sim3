@@ -25,9 +25,7 @@ def get_cost(attribute_list):
     return cost_list
 
 if __name__=="__main__":
-    selected_att_names = ['8minANYWANUpRate', '64minDNSUpRate', '1minANYWANUpRate', '64minANYWANDownRate',
-                                  '32minDNSUpRate', '32minANYWANDownCount', '4minANYWANDownCount', '2minANYWANUpCount',
-                                  '16minDNSUpRate', '64minNTPDownCount', '64minSSDPUpCount', '16minLANDownRate']
+    selected_att_names = ['32minDNSDownCount', '64minDNSDownCount', '16minDNSDownRate', '64minDNSDownRate', '8minDNSUpRate', '16minDNSUpRate', '32minDNSUpRate', '64minDNSUpRate', '64minNTPDownRate', '32minNTPUpRate', '64minNTPUpRate', '4minLANDownRate', '4minANYWANDownCount', '8minANYWANDownCount', '16minANYWANDownCount', '32minANYWANDownCount', '64minANYWANDownCount', '1minANYWANDownRate', '64minANYWANDownRate', '1minANYWANUPCount', '2minANYWANUPCount', '4minANYWANUPCount', '32minANYWANUPCount', '1minANYWANUPRate', '2minANYWANUPRate', '8minANYWANUPRate', '64minANYWANUPRate', '64minSSDPUpCount', '4minSSDPUpRate', '8minSSDPUpRate', '64minSSDPUpRate']
 
     cost = get_cost(selected_att_names)
     for e in cost:
