@@ -11,7 +11,10 @@
 #define LOG_PACKETS 0
 #define LOG_EVENTS 0
 
-#define FLOW_USAGE_LOG_PERIOD 60
+
+extern int verboseFlag;
+extern int resolution;
+
 #define FLOW_ACTIVITY_WITH_EPOCH_TIME true
 #define FLUSH_END_LAST_SECONDS false
 

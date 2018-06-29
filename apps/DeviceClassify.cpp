@@ -15,9 +15,10 @@ void DeviceClassify::pushInitialRules() {
 
     char_vec_t macList;
     macList.reserve(30);
+    //todo: allow to pass configuration as path
     readMacList("../config/macaddresslist.txt", &macList);
     for (int i =0;i<macList.size();i++){
-        debug("Mac %d: %s",i,macList[i].c_str());
+        verbose("Mac %d: %s",i,macList[i].c_str());
         initiateDeviceIdentificationRules(macList[i].c_str(),"14:cc:20:51:33:ea");
     }
 

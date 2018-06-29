@@ -33,7 +33,7 @@ public:
 
     SimClockTime& operator+=(const SimClockTime &rhs);
 
-    char* getFormattedTime(char* format);
+    char* getFormattedTime(const char* format);
 
     long getMSec() const;
 
