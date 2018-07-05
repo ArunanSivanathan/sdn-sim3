@@ -9,17 +9,16 @@ Controller *apps::getControllerApp(int ctrloptc, char *ctrloptv[]) {
     Controller* selectedController= nullptr;
     if (ctrloptc == 0){
         verbose("No controller specified. Loading default controller");
-        selectedController = new Controller();
+        selectedController = new Controller(ctrloptc,ctrloptv);
     }
 
-
     if (strcmp(ctrloptv[0],"ofdc")== 0)
-        selectedController= new DeviceClassify();
+        selectedController= new DeviceClassify(ctrloptc,ctrloptv);
     else if(strcmp(ctrloptv[0],"simplestatic") == 0)
-        selectedController= new SimpleStaticRules();
+        selectedController= new SimpleStaticRules(ctrloptc,ctrloptv);
     else {
         debug("App ID:%s not found. Loading default controller",ctrloptv[0]);
-        selectedController = new Controller();
+        selectedController = new Controller(ctrloptc,ctrloptv);
     }
     return selectedController;
 }

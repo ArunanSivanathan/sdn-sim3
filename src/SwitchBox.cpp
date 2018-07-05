@@ -180,14 +180,14 @@ void SwitchBox::logFlowInformations() {
 }
 
 void SwitchBox::logSummary(){
-    fprintf(stderr,"\nSummary\n");
-    fprintf(stderr,"Total no of packets:\t%lu\n",mPacketCount);
-    fprintf(stderr,"Total data :\t%lu Bytes\n",mDataCount);
-    fprintf(stderr,"No of drop:\t%lu\n",mPacketDropped);
-    fprintf(stderr,"No of forwards:\t%lu\n",mPacketFWD);
-    fprintf(stderr,"No of forwards to controller:\t%lu\n",mPacketFWD2ctrl);
-    fprintf(stderr,"No of mirrored:\t%lu\n",mPacketMirrored);
-    fprintf(stderr,"Total flowrules:\t%d\n",mFlowRuleCount);
+    fprintf(stdout,"\nSummary\n");
+    fprintf(stdout,"Total no of packets:\t%lu\n",mPacketCount);
+    fprintf(stdout,"Total data :\t%lu Bytes\n",mDataCount);
+    fprintf(stdout,"No of drop:\t%lu\n",mPacketDropped);
+    fprintf(stdout,"No of forwards:\t%lu\n",mPacketFWD);
+    fprintf(stdout,"No of forwards to controller:\t%lu\n",mPacketFWD2ctrl);
+    fprintf(stdout,"No of mirrored:\t%lu\n",mPacketMirrored);
+    fprintf(stdout,"Total flowrules:\t%d\n",mFlowRuleCount);
 }
 
 SwitchBox::~SwitchBox() {

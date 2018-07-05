@@ -371,3 +371,67 @@ pPcap::createPacketMeta(u_char *ether_shost, u_char *ether_dhost, uint16_t ether
 
     return newMeta;
 }
+
+struct pPcap::packet_meta *
+pPcap::createPacketMeta_frm_string(const char *ether_shost, const char  *ether_dhost, const char *ether_type, const char *ip_tos, const char *ip_p,
+                        const char *ip_src, const char *ip_dst, const char *sport, const char *dport){
+    struct pPcap::packet_meta *newMeta = (struct pPcap::packet_meta*)malloc(sizeof(struct pPcap::packet_meta));
+
+
+    //Source Mac
+    if (strcmp(ether_shost,"*")!=0)
+        newMeta->ether_shost = pPcap::str2mac(ether_shost);
+    else
+        newMeta->ether_shost = nullptr;
+
+    //Dst Mac
+    if (strcmp(ether_dhost,"*")!=0)
+        newMeta->ether_dhost = pPcap::str2mac(ether_dhost);
+    else
+        newMeta->ether_dhost = nullptr;
+
+    //ether_type
+    if (strcmp(ether_type,"*")!=0)
+        newMeta->ether_type = (uint16_t )atoi(ether_type);
+    else
+        newMeta->ether_type = 0;
+
+
+    //Type of service.
+    if (strcmp(ip_tos,"*")!=0)
+        newMeta->ip_tos = (uint8_t )atoi(ip_tos);
+    else
+        newMeta->ip_tos = 0;
+
+    //Protocol.
+    if (strcmp(ip_p,"*")!=0)
+        newMeta->ip_p = (uint8_t )atoi(ip_p);
+    else
+        newMeta->ip_p = 0;
+
+    //Source IP
+    if (strcmp(ip_src,"*")!=0)
+        newMeta->ip_src = pPcap::str2ip(ip_src);
+    else
+        newMeta->ip_src = pPcap::str2ip("0.0.0.0");
+
+    //Dst IP
+    if (strcmp(ip_dst,"*")!=0)
+        newMeta->ip_dst = pPcap::str2ip(ip_dst);
+    else
+        newMeta->ip_dst = pPcap::str2ip("0.0.0.0");
+
+    //Source port
+    if (strcmp(sport,"*")!=0)
+        newMeta->sport = (uint8_t )atoi(sport);
+    else
+        newMeta->sport = 0;
+
+    //Destination port
+    if (strcmp(dport,"*")!=0)
+        newMeta->dport = (uint8_t )atoi(dport);
+    else
+        newMeta->dport = 0;
+
+    return newMeta;
+}

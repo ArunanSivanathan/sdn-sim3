@@ -65,20 +65,21 @@ int main(int argc, char *argv[]) {
     if (optind >= argc){
         log_err("No source pcap file found in argument\n");
         printAppUsage();
-        exit(1);
+        exit(EXIT_FAILURE);
     }
+
     argPcap = argv[optind];
     ctrloptc = argc - (optind+1);
     ctrloptv = &argv[optind+1];
 
-
+    optind=0; //Reset argument counter
 
 
     // print banner
     displayBanner();
 
     verbose("Simulator output resolution\t:\t%d Sec",resolution);
-    verbose("Input PCAP\t:\t%s Sec",argPcap);
+    verbose("Input PCAP\t:\t%s",argPcap);
 
 
     systemClock = new SimClock(&timeTickCallback);
@@ -106,6 +107,7 @@ void printAppUsage(){
     std::cerr<<"Controllers:"<<std::endl;
     std::cerr<<" ofdc\t\t\tOpenflow device classification"<<std::endl;
     std::cerr<<" simplestatic\tSimple static flows"<<std::endl;
+    exit(EXIT_FAILURE);
 }
 
 void packetInWrapper(int p_no, const unsigned char *packet, struct pcap_pkthdr *header)

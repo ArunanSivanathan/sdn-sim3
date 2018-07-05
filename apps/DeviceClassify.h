@@ -14,6 +14,9 @@
 class DeviceClassify: public Controller{
 public:
     typedef std::vector<std::string> char_vec_t;
+
+    DeviceClassify(int ctrloptc, char **ctrloptv);
+
     SwitchBox *getServiceSwitch() const override {
         return Controller::getServiceSwitch();
     }

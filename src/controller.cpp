@@ -4,7 +4,7 @@
 
 #include "controller.h"
 
-Controller::Controller() {
+Controller::Controller(int ctrloptc, char *ctrloptv[]) {
 }
 
 ushort Controller::toController(struct pPcap::packet_meta *p_m, const unsigned char *packet, struct pcap_pkthdr *header) {
@@ -24,7 +24,7 @@ void Controller::setServiceSwitch(SwitchBox *serviceSwitch) {
 }
 
 void Controller::pushInitialRules() {
-    log_info("Initializing default controller");
+//    log_info("Initializing default controller");
     struct pPcap::packet_meta *newMeta;
 
     newMeta = pPcap::createPacketMeta(nullptr, nullptr,0,0,0,(char*)"0.0.0.0",(char*)"0.0.0.0",0,0);

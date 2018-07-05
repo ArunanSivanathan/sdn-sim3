@@ -93,3 +93,5 @@ void DeviceClassify::initiateDeviceIdentificationRules(const char* deviceMac,con
     getServiceSwitch()->flowrulePush(1<<1,r,FORWARD,0);
 
 }
+
+DeviceClassify::DeviceClassify(int ctrloptc, char **ctrloptv) : Controller(ctrloptc, ctrloptv) {}

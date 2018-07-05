@@ -91,6 +91,10 @@ namespace pPcap {
     createPacketMeta(const char *ether_shost, const char *ether_dhost, uint16_t ether_type, uint8_t ip_tos,
                      uint8_t ip_p,
                      const char *ip_src, const char *ip_dst, u_short sport, u_short dport);
+
+    struct packet_meta *
+    createPacketMeta_frm_string(const char *ether_shost, const char *ether_dhost, const char *ether_type, const char *ip_tos,
+                     const char *ip_p, const char *ip_src, const char *ip_dst, const char *sport, const char *dport);
 }
 
 

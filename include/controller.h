@@ -15,7 +15,7 @@ class Controller {
 public:
 
 
-    explicit Controller();
+    explicit Controller(int ctrloptc, char *ctrloptv[]);
 
     virtual SwitchBox *getServiceSwitch() const;
 
