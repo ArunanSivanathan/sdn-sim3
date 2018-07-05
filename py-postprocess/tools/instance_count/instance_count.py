@@ -5,7 +5,7 @@ from plotly.utils import numpy
 import visuals
 
 
-class InsrtanceCounter():
+class InstanceCounter():
     def __init__(self, inputfile):
         self.input_file = inputfile
         self.instance_histogram={}
@@ -72,13 +72,13 @@ def ordered_values(stat_dict, ordered_label,unequal_label=False):
     return vals
 
 if __name__ == "__main__":
-    csv_files = ['testing-all', 'testing-dec','testing-feb','testing-jan','testing-march','training']
+    csv_files = ['device_identification_full_dataset-training']
 
     for filename in csv_files:
-        ic = InsrtanceCounter('../merge_instances/%s.csv'%filename)
+        ic = InstanceCounter('../merge_instances/%s.csv' % filename)
         ic_value_dict = ic.count_instance()
 
-        plot_order = ['1', '2', '3', '5', '6', '9', '12', '14', '15', '16', '17','18', '21', '22', '25', '26', '28']
+        plot_order = ['1', '2', '3', '5', '6', '9', '12', '14', '15', '16', '17','18', '21', '22', '25', '26', '28','99']
         device_names = {'1':'Amazon Echo',
                         '2':'August Doorbell',
                         '3':'Awair air quality',
@@ -95,7 +95,8 @@ if __name__ == "__main__":
                         '22':'Smart Things',
                         '25':'Triby Speaker',
                         '26':'Withings sleep sensor',
-                        '28':'Withings Scale'}
+                        '28':'Withings Scale',
+                        '99': 'Non-IoT'}
 
         bar_heights = order_vals = ordered_values(ic_value_dict,plot_order)
         device_labels = ordered_values(device_names,device_names)

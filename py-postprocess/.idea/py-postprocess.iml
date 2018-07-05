@@ -10,6 +10,13 @@
       <sourceFolder url="file://$MODULE_DIR$/tools/attribute_cost" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tools/daily_basis_testing" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tools/weka_processing" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tools/attribute_impact_precision_recall" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/iot_vs_noniot_instances/data" />
+      <excludeFolder url="file://$MODULE_DIR$/iot_vs_noniot_instances/instances" />
+      <excludeFolder url="file://$MODULE_DIR$/iot_vs_noniot_instances/out_temp" />
+      <excludeFolder url="file://$MODULE_DIR$/of_activity_instances/data" />
+      <excludeFolder url="file://$MODULE_DIR$/of_activity_instances/instances" />
+      <excludeFolder url="file://$MODULE_DIR$/of_activity_instances/out_temp" />
       <excludeFolder url="file://$MODULE_DIR$/of_dev_instances/instances" />
       <excludeFolder url="file://$MODULE_DIR$/of_state_instacnes/instances" />
     </content>

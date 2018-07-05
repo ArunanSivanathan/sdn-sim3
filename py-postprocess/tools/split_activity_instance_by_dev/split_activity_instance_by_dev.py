@@ -1,7 +1,7 @@
 import csv
 
 
-class SplitStateInstances:
+class SplitActivityInstancesDevSpecific:
     def __init__(self, file, device_col_no):
         self.filename = file
         self.dev_colno = device_col_no
@@ -21,7 +21,8 @@ class SplitStateInstances:
         l_seek = 0
         for e_l in csv_reader:
             l_seek = l_seek + 1
-            new_row = e_l[1:self.dev_colno] + e_l[(self.dev_colno+1):-1]+ [state_dict.get(e_l[-1],e_l[-1])]
+            # new_row = e_l[1:self.dev_colno] + e_l[(self.dev_colno+1):-1]+ [state_dict.get(e_l[-1],e_l[-1])]
+            new_row = e_l[0:self.dev_colno] + e_l[(self.dev_colno+1):-1]+ [state_dict.get(e_l[-1],e_l[-1])]
 
             if l_seek==1:
                 [csv_writers[e_dev_id].writerow(new_row) for e_dev_id in output_file_dev_id_map.keys()]
@@ -46,6 +47,6 @@ if __name__ == "__main__":
                   '17': './csv_files/activity_netwelcome.csv',
                   '21': './csv_files/activity_smartcam.csv'}
 
-    state_instance = SplitStateInstances(
+    state_instance = SplitActivityInstancesDevSpecific(
         '/Users/Arunan/Documents/coderepo/sdn-sim3/py-postprocess/of_state_instacnes_new_activitybased/instances/18-06-14.csv', -2)
     state_instance.write_to_file(file_names)

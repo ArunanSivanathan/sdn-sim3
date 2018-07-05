@@ -2,7 +2,7 @@ import csv
 import random
 
 
-class FirstNInstances:
+class SplitInstances:
     def __init__(self,filename,class_col=-1):
         self.filename = filename
         self.class_col=class_col
@@ -126,13 +126,15 @@ class FirstNInstances:
 
 
 if __name__ == "__main__":
-    base_url='/Users/Arunan/Documents/coderepo/sdn-sim3/py-postprocess/tools/split_state_instance_devices/csv_files'
-    file_vector = ['amazonecho','belkinswitch','dropcam','lifx']
+    base_url='/Users/Arunan/Documents/coderepo/sdn-sim3/py-postprocess/iot_vs_noniot_instances/data/'
+    file_vector = ['device_identification_full_dataset']
 
     for file in file_vector:
-        fni = FirstNInstances('%s/activity_%s.csv'%(base_url,file))
+        fni = SplitInstances('%s/%s.csv' % (base_url, file))
         instance_count = fni.__instance_count__()
 
         # train_portion = {k:v*0.66 for k,v in instance_count.items() }
-        train_portion = {k:40 for k,v in instance_count.items() }
+        # train_portion = {k:40 for k,v in instance_count.items() }
+        train_portion = {'1':50,'2':50,'3':50, '5':50, '6':50, '9':50, '12':50, '14':50, '15':50, '16':50,'17':50, '18':50, '21':50, '22':50, '25':50, '26':50, '28':50, '99': 800}
+        # train_portion = {k:40 for k,v in instance_count.items() }
         fni.split_n(train_portion,'./csv/%s-training.csv'%file, './csv/%s-testing.csv'%file)

@@ -2,69 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c5aa9dd-68d9-4d50-8a12-eaf342a48738" name="Default" comment="x=">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../apps/SimpleStaticRules.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../apps/SimpleStaticRules.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../config/macaddresslist-states.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_dev_instances/dev_instances.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_dev_instances/executesim/macaddresslist-dev_instances.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes/annotate_states/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes/config.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes/executesim/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes/of_volumetric_attribute_writer/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes/sim_flow_info_read/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes/sim_flow_meter_read/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/annotate_states/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/config.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/executesim/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/of_volumetric_attribute_writer/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/sim_flow_info_read/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/sim_flow_meter_read/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/state_instances.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/attribute_impact/accuracyrrse.txt.bak" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/attribute_impact_precision_recall/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/attribute_impact_precision_recall/accuracyrrse.txt.bak" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/attribute_impact_precision_recall/attribute_impact.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/attribute_impact_precision_recall/wekatools/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/daily_basis_testing/daily_basis_testing.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/daily_basis_testing/wekatools/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/epoch_to_localtime/epoch_to_local.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/filter_instances/filter_instances.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/find_n_replace/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/gen_confusion_matrix/gen_confusion_matrix.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/limit_pcap_time/limit_pcap_time.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/merge_pcaps/merge_pcaps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/predict_induvidual_instances/predict_induvidual_instances.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/split_instances/first_n_instances.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/split_state_instance_devices/split_state_instance_devices.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/weka_processing/csv/testing-3month-include-feb.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/weka_processing/csv/testing-3month-without-feb.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/weka_processing/csv/training-3month-include-feb.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/weka_processing/csv/training-3month-without-feb.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/of_dev_instances/main.py" afterPath="$PROJECT_DIR$/of_state_instacnes/state_instances.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iot_vs_noniot_instances/out_temp/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/label_replace/label_replace.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/plot_traffic/plot_traffic.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/predict_instances/predict_instances.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/split_activity_instance_by_dev/split_activity_instance_by_dev.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/split_instances/split_instances.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes/annotate_states/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes/config.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes/executesim/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes/of_volumetric_attribute_writer/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes/sim_flow_info_read/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes/sim_flow_meter_read/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes/state_instances.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/annotate_states/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/config.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/executesim/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/of_volumetric_attribute_writer/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/sim_flow_info_read/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/sim_flow_meter_read/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/of_state_instacnes_new_activitybased/state_instances.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/predict_induvidual_instances/predict_induvidual_instances.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/split_instances/first_n_instances.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/split_state_instance_devices/split_state_instance_devices.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/weka_processing/csv/testing-3month-include-feb.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/weka_processing/csv/testing-3month-without-feb.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/weka_processing/csv/training-3month-include-feb.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/weka_processing/csv/training-3month-without-feb.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CMakeLists.txt" afterPath="$PROJECT_DIR$/../CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apps/apps.cpp" afterPath="$PROJECT_DIR$/../apps/apps.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../apps/apps.h" afterPath="$PROJECT_DIR$/../apps/apps.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../config/macaddresslist.txt" afterPath="$PROJECT_DIR$/../config/macaddresslist.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../include/SwitchBox.h" afterPath="$PROJECT_DIR$/../include/SwitchBox.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../include/config.h" afterPath="$PROJECT_DIR$/../include/config.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../main.cpp" afterPath="$PROJECT_DIR$/../main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/py-postprocess.iml" afterPath="$PROJECT_DIR$/.idea/py-postprocess.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/of_dev_instances/config.py" afterPath="$PROJECT_DIR$/of_dev_instances/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/of_dev_instances/of_volumetric_attribute_writer/__init__.py" afterPath="$PROJECT_DIR$/of_dev_instances/of_volumetric_attribute_writer/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/attribute_cost/attribute_cost.py" afterPath="$PROJECT_DIR$/tools/attribute_cost/attribute_cost.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/attribute_histogram/attribute_histogram.py" afterPath="$PROJECT_DIR$/tools/attribute_histogram/attribute_histogram.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/attribute_impact/attribute_impact.py" afterPath="$PROJECT_DIR$/tools/attribute_impact/attribute_impact.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/directory_lister/list_dir.py" afterPath="$PROJECT_DIR$/tools/directory_lister/list_dir.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/gen_confusion_matrix/gen_confusion_matrix.py" afterPath="$PROJECT_DIR$/tools/gen_confusion_matrix/gen_confusion_matrix.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/instance_count/instance_count.py" afterPath="$PROJECT_DIR$/tools/instance_count/instance_count.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/merge_instances/merge_instance.py" afterPath="$PROJECT_DIR$/tools/merge_instances/merge_instance.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/weka_processing/weka_processing.py" afterPath="$PROJECT_DIR$/tools/weka_processing/weka_processing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/weka_processing/wekatools/__init__.py" afterPath="$PROJECT_DIR$/tools/weka_processing/wekatools/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/Flows.cpp" afterPath="$PROJECT_DIR$/../src/Flows.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/SimClock.cpp" afterPath="$PROJECT_DIR$/../src/SimClock.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/SwitchBox.cpp" afterPath="$PROJECT_DIR$/../src/SwitchBox.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/pcapParser.cpp" afterPath="$PROJECT_DIR$/../src/pcapParser.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/merge_pcaps/merge_pcaps.py" afterPath="$PROJECT_DIR$/tools/merge_pcaps/merge_pcaps.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,80 +48,99 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/py_postprocess$first_n_instances.coverage" NAME="first_n_instances Coverage Results" MODIFIED="1529897041763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/split_instances" />
-    <SUITE FILE_PATH="coverage/py_postprocess$weka_processing.coverage" NAME="weka_processing Coverage Results" MODIFIED="1529897045921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/weka_processing" />
-    <SUITE FILE_PATH="coverage/py_postprocess$state_instances.coverage" NAME="state_instances Coverage Results" MODIFIED="1529894439079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/of_state_instacnes_new_activitybased" />
+    <SUITE FILE_PATH="coverage/py_postprocess$first_n_instances.coverage" NAME="first_n_instances Coverage Results" MODIFIED="1530068803498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/split_instances" />
+    <SUITE FILE_PATH="coverage/py_postprocess$read_activity_pattern.coverage" NAME="read_activity_pattern Coverage Results" MODIFIED="1530681788564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/of_activity_time_measure" />
+    <SUITE FILE_PATH="coverage/py_postprocess$label_replace.coverage" NAME="label_replace Coverage Results" MODIFIED="1530074652445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/label_replace" />
     <SUITE FILE_PATH="coverage/py_postprocess$limit_pcap_time.coverage" NAME="limit_pcap_time Coverage Results" MODIFIED="1525069492486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/limit_pcap_time" />
     <SUITE FILE_PATH="coverage/py_postprocess$epoch_to_local.coverage" NAME="epoch_to_local Coverage Results" MODIFIED="1529888276646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/epoch_to_localtime" />
+    <SUITE FILE_PATH="coverage/py_postprocess$gen_confusion_matrix.coverage" NAME="gen_confusion_matrix Coverage Results" MODIFIED="1530083874763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/gen_confusion_matrix" />
     <SUITE FILE_PATH="coverage/py_postprocess$main.coverage" NAME="main Coverage Results" MODIFIED="1524535444556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/of_dev_instances" />
     <SUITE FILE_PATH="coverage/py_postprocess$daily_basis_testing.coverage" NAME="daily_basis_testing Coverage Results" MODIFIED="1524552676437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/daily_basis_testing" />
-    <SUITE FILE_PATH="coverage/py_postprocess$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1529887232040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/find_n_replace" />
-    <SUITE FILE_PATH="coverage/py_postprocess$attribute_histogram.coverage" NAME="attribute_histogram Coverage Results" MODIFIED="1524532405240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/attribute_histogram" />
-    <SUITE FILE_PATH="coverage/py_postprocess$attribute_impact__1_.coverage" NAME="attribute_impact (1) Coverage Results" MODIFIED="1529374166773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/attribute_impact_precision_recall" />
     <SUITE FILE_PATH="coverage/py_postprocess$dev_instances.coverage" NAME="dev_instances Coverage Results" MODIFIED="1529471960483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/of_dev_instances" />
-    <SUITE FILE_PATH="coverage/py_postprocess$filter_instances.coverage" NAME="filter_instances Coverage Results" MODIFIED="1529483792788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/filter_instances" />
     <SUITE FILE_PATH="coverage/py_postprocess$list_dir.coverage" NAME="list_dir Coverage Results" MODIFIED="1525094993034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/directory_lister" />
-    <SUITE FILE_PATH="coverage/py_postprocess$attribute_cost.coverage" NAME="attribute_cost Coverage Results" MODIFIED="1525878543658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/attribute_cost" />
-    <SUITE FILE_PATH="coverage/py_postprocess$instance_count.coverage" NAME="instance_count Coverage Results" MODIFIED="1524459114269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/instance_count" />
+    <SUITE FILE_PATH="coverage/py_postprocess$activity_instances.coverage" NAME="activity_instances Coverage Results" MODIFIED="1530756944899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/of_activity_instances" />
     <SUITE FILE_PATH="coverage/py_postprocess$main__1_.coverage" NAME="of_dev_instance Coverage Results" MODIFIED="1524410989381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/of_dev_instances" />
     <SUITE FILE_PATH="coverage/py_postprocess$predict_induvidual_instances.coverage" NAME="predict_induvidual_instances Coverage Results" MODIFIED="1529635028615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/predict_induvidual_instances" />
+    <SUITE FILE_PATH="coverage/py_postprocess$plot_traffic.coverage" NAME="plot_traffic Coverage Results" MODIFIED="1530696727307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/plot_traffic" />
     <SUITE FILE_PATH="coverage/py_postprocess$of_dev_instance.coverage" NAME="of_dev_instance Coverage Results" MODIFIED="1524434250395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/of_dev_instances" />
-    <SUITE FILE_PATH="coverage/py_postprocess$merge_instance.coverage" NAME="merge_instance Coverage Results" MODIFIED="1529645343142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/merge_instances" />
+    <SUITE FILE_PATH="coverage/py_postprocess$classify_activities.coverage" NAME="classify_activities Coverage Results" MODIFIED="1530757131046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/of_activity_instances" />
     <SUITE FILE_PATH="coverage/py_postprocess$scratch_2.coverage" NAME="scratch_2 Coverage Results" MODIFIED="1525514466744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/py_postprocess$weka_processing.coverage" NAME="weka_processing Coverage Results" MODIFIED="1529897045921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/weka_processing" />
+    <SUITE FILE_PATH="coverage/py_postprocess$state_instances.coverage" NAME="state_instances Coverage Results" MODIFIED="1529894439079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/of_state_instacnes_new_activitybased" />
+    <SUITE FILE_PATH="coverage/py_postprocess$iot_vs_noniot_instances.coverage" NAME="iot_vs_noniot_instances Coverage Results" MODIFIED="1530007590979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/iot_vs_noniot_instances" />
+    <SUITE FILE_PATH="coverage/py_postprocess$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1529887232040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/find_n_replace" />
+    <SUITE FILE_PATH="coverage/py_postprocess$gen_iot_noniot_instances.coverage" NAME="gen_iot_noniot_instances Coverage Results" MODIFIED="1530104061513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/iot_vs_noniot_instances" />
+    <SUITE FILE_PATH="coverage/py_postprocess$attribute_histogram.coverage" NAME="attribute_histogram Coverage Results" MODIFIED="1524532405240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/attribute_histogram" />
+    <SUITE FILE_PATH="coverage/py_postprocess$attribute_impact__1_.coverage" NAME="attribute_impact (1) Coverage Results" MODIFIED="1529374166773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/attribute_impact_precision_recall" />
+    <SUITE FILE_PATH="coverage/py_postprocess$filter_instances.coverage" NAME="filter_instances Coverage Results" MODIFIED="1529483792788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/filter_instances" />
+    <SUITE FILE_PATH="coverage/py_postprocess$attribute_cost.coverage" NAME="attribute_cost Coverage Results" MODIFIED="1525878543658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/attribute_cost" />
+    <SUITE FILE_PATH="coverage/py_postprocess$scratch_3.coverage" NAME="scratch_3 Coverage Results" MODIFIED="1530082554585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/py_postprocess$instance_count.coverage" NAME="instance_count Coverage Results" MODIFIED="1530068749252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/instance_count" />
+    <SUITE FILE_PATH="coverage/py_postprocess$merge_instance.coverage" NAME="merge_instance Coverage Results" MODIFIED="1530067401908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/merge_instances" />
     <SUITE FILE_PATH="coverage/py_postprocess$split_state_instance_devices.coverage" NAME="split_state_instance_devices Coverage Results" MODIFIED="1529895939635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/split_state_instance_devices" />
-    <SUITE FILE_PATH="coverage/py_postprocess$attribute_impact.coverage" NAME="attribute_impact Coverage Results" MODIFIED="1525993405128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/attribute_impact" />
-    <SUITE FILE_PATH="coverage/py_postprocess$merge_pcaps.coverage" NAME="merge_pcaps Coverage Results" MODIFIED="1529887074249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/merge_pcaps" />
+    <SUITE FILE_PATH="coverage/py_postprocess$attribute_impact.coverage" NAME="attribute_impact Coverage Results" MODIFIED="1530615275774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/attribute_impact" />
+    <SUITE FILE_PATH="coverage/py_postprocess$merge_pcaps.coverage" NAME="merge_pcaps Coverage Results" MODIFIED="1530681719666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/merge_pcaps" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="weka_processing.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/weka_processing/weka_processing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" column="124" lean-forward="false" selection-start-line="13" selection-start-column="124" selection-end-line="13" selection-end-column="124" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/of_state_instacnes/config.py">
+        <entry file="file://$PROJECT_DIR$/of_activity_instances/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dev_instances.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/of_dev_instances/dev_instances.py">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/iot_vs_noniot_instances/out_temp/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="35" column="38" lean-forward="false" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/of_dev_instances/config.py">
+      <file leaf-file-name="activity_instances.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/of_activity_instances/activity_instances.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="17" />
+            <state relative-caret-position="429">
+              <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="first_n_instances.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/split_instances/first_n_instances.py">
+      <file leaf-file-name="classify_activities.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/of_activity_instances/classify_activities.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2025">
-              <caret line="136" column="29" lean-forward="false" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
+            <state relative-caret-position="212">
+              <caret line="78" column="87" lean-forward="false" selection-start-line="78" selection-start-column="87" selection-end-line="78" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="attribute_histogram.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/attribute_histogram/attribute_histogram.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="54" column="59" lean-forward="false" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="59" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/of_activity_instances/of_volumetric_attribute_writer/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -178,10 +171,18 @@
       <find>a</find>
       <find>classifications</find>
       <find>1minANYWANUPCount</find>
-      <find>remove</find>
       <find>nom</find>
-      <find>INSTANCE_INTERVAL</find>
       <find>print</find>
+      <find>INSTANCE_INTERVAL</find>
+      <find>remove</find>
+      <find>device_class</find>
+      <find>device_clas</find>
+      <find>ac</find>
+      <find>3$</find>
+      <find>2$</find>
+      <find>boot</find>
+      <find>[^0],1,</find>
+      <find>^.*(?=(Count|Rate)).*</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -198,48 +199,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tools/instance_count/bar_chart/__init__.py" />
-        <option value="$PROJECT_DIR$/tools/instance_count/visuals/__init__.py" />
-        <option value="$PROJECT_DIR$/tools/instance_count/instance_count.py" />
-        <option value="$PROJECT_DIR$/tools/attribute_impact/wekaout.tmp.txt" />
-        <option value="$PROJECT_DIR$/tools/attribute_impact/wekatools/__init__.py" />
-        <option value="$PROJECT_DIR$/of_dev_instances/instances/.gitignore" />
-        <option value="$PROJECT_DIR$/tools/weka_processing/wekatools/.gitignore" />
-        <option value="$PROJECT_DIR$/tools/merge_instances/.gitignore" />
-        <option value="$PROJECT_DIR$/tools/attribute_impact/.gitignore" />
-        <option value="$PROJECT_DIR$/tools/attribute_histogram/attribute_histogram.py" />
-        <option value="$PROJECT_DIR$/of_dev_instances/main.py" />
-        <option value="$PROJECT_DIR$/tools/daily_basis_testing/tmp_test.arff" />
-        <option value="$PROJECT_DIR$/tools/daily_basis_testing/wekatools/__init__.py" />
-        <option value="$PROJECT_DIR$/tools/daily_basis_testing/daily_basis_testing.py" />
-        <option value="$PROJECT_DIR$/tools/daily_basis_testing/output.txt" />
-        <option value="$PROJECT_DIR$/of_state_instacnes/instances/18-01-20.csv" />
-        <option value="$PROJECT_DIR$/of_state_instacnes/instances/18-01-21.csv" />
-        <option value="$PROJECT_DIR$/of_state_instacnes/config.py" />
-        <option value="$PROJECT_DIR$/of_state_instacnes/annotate_states/__init__.py" />
-        <option value="$PROJECT_DIR$/tools/corrupted_packets_filter/__init__.py" />
-        <option value="$PROJECT_DIR$/tools/limit_pcap_time/__init__.py" />
-        <option value="$PROJECT_DIR$/of_state_instacnes/executesim/__init__.py" />
-        <option value="$PROJECT_DIR$/tools/limit_pcap_time/limit_pcap_time.py" />
-        <option value="$PROJECT_DIR$/of_state_instacnes/instances/18-02-14.csv" />
-        <option value="$PROJECT_DIR$/of_state_instacnes/of_volumetric_attribute_writer/__init__.py" />
-        <option value="$PROJECT_DIR$/tools/directory_lister/list_dir.py" />
-        <option value="$PROJECT_DIR$/tools/weka_processing/weka_confusion_map/weka_confusion_map.py" />
-        <option value="$PROJECT_DIR$/tools/predict_induvidual_instances/prediction.csv" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
-        <option value="$PROJECT_DIR$/of_dev_instances/of_volumetric_attribute_writer/__init__.py" />
-        <option value="$PROJECT_DIR$/tools/gen_confusion_matrix/gen_confusion_matrix.py" />
-        <option value="$PROJECT_DIR$/tools/attribute_cost/attribute_cost.py" />
-        <option value="$PROJECT_DIR$/tools/attribute_impact/attribute_impact.py" />
         <option value="$PROJECT_DIR$/tools/attribute_impact_precision_recall/attribute_impact.py" />
         <option value="$PROJECT_DIR$/of_state_instacnes/state_instances.py" />
-        <option value="$PROJECT_DIR$/of_dev_instances/config.py" />
         <option value="$PROJECT_DIR$/of_dev_instances/dev_instances.py" />
         <option value="$PROJECT_DIR$/tools/weka_processing/wekatools/__init__.py" />
         <option value="$PROJECT_DIR$/tools/predict_induvidual_instances/predict_induvidual_instances.py" />
-        <option value="$PROJECT_DIR$/tools/merge_instances/merge_instance.py" />
         <option value="$PROJECT_DIR$/tools/filter_instances/filter_instances.py" />
-        <option value="$PROJECT_DIR$/tools/merge_pcaps/merge_pcaps.py" />
         <option value="$PROJECT_DIR$/tools/find_n_replace/__init__.py" />
         <option value="$PROJECT_DIR$/tools/epoch_to_localtime/epoch_to_local.py" />
         <option value="$PROJECT_DIR$/of_state_instacnes_new_activitybased/of_volumetric_attribute_writer/__init__.py" />
@@ -248,7 +213,43 @@
         <option value="$PROJECT_DIR$/of_state_instacnes_new_activitybased/config.py" />
         <option value="$PROJECT_DIR$/tools/split_state_instance_devices/split_state_instance_devices.py" />
         <option value="$PROJECT_DIR$/tools/weka_processing/weka_processing.py" />
+        <option value="$PROJECT_DIR$/iot_vs_noniot_instances/dev_instances.py" />
+        <option value="$PROJECT_DIR$/iot_vs_noniot_instances/config.py" />
+        <option value="$PROJECT_DIR$/of_dev_instances/config.py" />
+        <option value="$PROJECT_DIR$/of_activity_instacnes/config.py" />
+        <option value="$PROJECT_DIR$/tools/merge_instances/merge_instance.py" />
         <option value="$PROJECT_DIR$/tools/split_instances/first_n_instances.py" />
+        <option value="$PROJECT_DIR$/tools/instance_count/instance_count.py" />
+        <option value="$PROJECT_DIR$/tools/split_instances/split_instances.py" />
+        <option value="$PROJECT_DIR$/tools/label_replace/label_replace.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
+        <option value="$PROJECT_DIR$/iot_vs_noniot_instances/gen_iot_noniot_instances.py" />
+        <option value="$PROJECT_DIR$/of_activity_time_measure/state_instances.py" />
+        <option value="$PROJECT_DIR$/of_activity_time_measure/executesim/__init__.py" />
+        <option value="$PROJECT_DIR$/of_activity_time_measure/annotate_states/__init__.py" />
+        <option value="$PROJECT_DIR$/of_activity_time_measure/plot_traffic/plot_traffic.py" />
+        <option value="$PROJECT_DIR$/readme.txt" />
+        <option value="$PROJECT_DIR$/of_activity_instacnes/state_instances.py" />
+        <option value="$PROJECT_DIR$/of_activity_instances/state_instances.py" />
+        <option value="$PROJECT_DIR$/of_activity_instances/executesim/__init__.py" />
+        <option value="$PROJECT_DIR$/of_activity_instances/of_volumetric_attribute_writer/__init__.py" />
+        <option value="$PROJECT_DIR$/tools/split_activity_instance_by_dev/split_activity_instance_by_dev.py" />
+        <option value="$PROJECT_DIR$/tools/gen_confusion_matrix/gen_confusion_matrix.py" />
+        <option value="$PROJECT_DIR$/of_activity_time_measure/config.py" />
+        <option value="$PROJECT_DIR$/of_activity_time_measure/instances/18-06-14.csv" />
+        <option value="$PROJECT_DIR$/of_activity_time_measure/of_volumetric_attribute_writer/__init__.py" />
+        <option value="$PROJECT_DIR$/of_activity_instances/instances/18-06-14.csv" />
+        <option value="$PROJECT_DIR$/of_activity_instances/annotate_states/__init__.py" />
+        <option value="$PROJECT_DIR$/of_activity_time_measure/instances/18-06-26.csv" />
+        <option value="$PROJECT_DIR$/tools/merge_pcaps/merge_pcaps.py" />
+        <option value="$PROJECT_DIR$/of_activity_time_measure/read_activity_pattern.py" />
+        <option value="$PROJECT_DIR$/tools/plot_traffic/plot_traffic.py" />
+        <option value="$PROJECT_DIR$/of_activity_instances/activity_instances.py" />
+        <option value="$PROJECT_DIR$/of_activity_instances/config.py" />
+        <option value="$PROJECT_DIR$/of_activity_instances/classify_activities.py" />
+        <option value="$PROJECT_DIR$/tools/attribute_histogram/attribute_histogram.py" />
+        <option value="$PROJECT_DIR$/iot_vs_noniot_instances/out_temp/.gitignore" />
       </list>
     </option>
   </component>
@@ -280,8 +281,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -292,34 +291,36 @@
             <path>
               <item name="py-postprocess" type="b2602c69:ProjectViewProjectNode" />
               <item name="py-postprocess" type="462c0819:PsiDirectoryNode" />
-              <item name="of_dev_instances" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/of_activity_instances" />
+      <recent name="$PROJECT_DIR$/tools/gen_confusion_matrix" />
+      <recent name="$PROJECT_DIR$/tools" />
+      <recent name="$PROJECT_DIR$/iot_vs_noniot_instances/data/1-device_identifiction_full_data" />
       <recent name="$PROJECT_DIR$/tools/weka_processing/csv" />
-      <recent name="$PROJECT_DIR$/tools/weka_processing" />
-      <recent name="$PROJECT_DIR$/tools/predict_induvidual_instances/csv" />
-      <recent name="$PROJECT_DIR$/tools/split_instances/csv" />
-      <recent name="$PROJECT_DIR$/tools/weka_processing/arff_files" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tools/weka_processing/csv" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/tools" />
-      <recent name="$PROJECT_DIR$/of_dev_instances" />
-      <recent name="$PROJECT_DIR$/of_state_instacnes" />
+      <recent name="$PROJECT_DIR$/of_activity_instances/instances" />
+      <recent name="$PROJECT_DIR$/of_activity_time_measure/instances" />
+      <recent name="$PROJECT_DIR$/of_activity_instances/out_temp" />
+      <recent name="$PROJECT_DIR$/of_activity_time_measure" />
+      <recent name="$PROJECT_DIR$/of_activity_instances" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -334,111 +335,111 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.weka_processing">
-    <configuration name="epoch_to_local" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.classify_activities">
+    <configuration name="activity_instances" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/epoch_to_localtime" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/of_activity_instances" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="py-postprocess" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/epoch_to_localtime/epoch_to_local.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/of_activity_instances/activity_instances.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="first_n_instances" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="classify_activities" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/split_instances" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/of_activity_instances" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="py-postprocess" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/split_instances/first_n_instances.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/of_activity_instances/classify_activities.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="split_state_instance_devices" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="merge_pcaps" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/split_state_instance_devices" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/merge_pcaps" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="py-postprocess" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/split_state_instance_devices/split_state_instance_devices.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/merge_pcaps/merge_pcaps.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="state_instances" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="plot_traffic" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/of_state_instacnes_new_activitybased" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/plot_traffic" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="py-postprocess" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/of_state_instacnes_new_activitybased/state_instances.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/plot_traffic/plot_traffic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="weka_processing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="read_activity_pattern" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/weka_processing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/of_activity_time_measure" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="py-postprocess" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/weka_processing/weka_processing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/of_activity_time_measure/read_activity_pattern.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.state_instances" />
-      <item index="1" class="java.lang.String" itemvalue="Python.epoch_to_local" />
-      <item index="2" class="java.lang.String" itemvalue="Python.first_n_instances" />
-      <item index="3" class="java.lang.String" itemvalue="Python.weka_processing" />
-      <item index="4" class="java.lang.String" itemvalue="Python.split_state_instance_devices" />
+      <item index="0" class="java.lang.String" itemvalue="Python.plot_traffic" />
+      <item index="1" class="java.lang.String" itemvalue="Python.activity_instances" />
+      <item index="2" class="java.lang.String" itemvalue="Python.classify_activities" />
+      <item index="3" class="java.lang.String" itemvalue="Python.merge_pcaps" />
+      <item index="4" class="java.lang.String" itemvalue="Python.read_activity_pattern" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.weka_processing" />
-        <item index="1" class="java.lang.String" itemvalue="Python.first_n_instances" />
-        <item index="2" class="java.lang.String" itemvalue="Python.split_state_instance_devices" />
-        <item index="3" class="java.lang.String" itemvalue="Python.state_instances" />
-        <item index="4" class="java.lang.String" itemvalue="Python.epoch_to_local" />
+        <item index="0" class="java.lang.String" itemvalue="Python.classify_activities" />
+        <item index="1" class="java.lang.String" itemvalue="Python.activity_instances" />
+        <item index="2" class="java.lang.String" itemvalue="Python.plot_traffic" />
+        <item index="3" class="java.lang.String" itemvalue="Python.read_activity_pattern" />
+        <item index="4" class="java.lang.String" itemvalue="Python.merge_pcaps" />
       </list>
     </recent_temporary>
   </component>
@@ -467,16 +468,16 @@
   <component name="ToolWindowManager">
     <frame x="-268" y="-1080" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1970181" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22470714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32825205" sideWeight="0.5021299" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4751244" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50914633" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32825205" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42288557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4207317" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -486,6 +487,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,16 +505,6 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tools/instance_count/visuals/__init__.py</url>
-          <line>120</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tools/instance_count/visuals/__init__.py</url>
-          <line>133</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/of_state_instacnes/annotate_states/__init__.py</url>
           <line>26</line>
           <option name="timeStamp" value="67" />
@@ -522,6 +514,20 @@
           <line>15</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/iot_vs_noniot_instances/of_volumetric_attribute_writer/__init__.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/merge_pcaps/merge_pcaps.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/of_activity_time_measure/read_activity_pattern.py</url>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -530,333 +536,375 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="110" />
+      <option name="time" value="161" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/of_dev_instances/instances/17-01-01.csv">
+    <entry file="file://$PROJECT_DIR$/iot_vs_noniot_instances/instance-count-raw_instances.png" />
+    <entry file="file://$PROJECT_DIR$/tools/label_replace/non-IoT.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="342" lean-forward="true" selection-start-line="3" selection-start-column="342" selection-end-line="3" selection-end-column="342" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/label_replace/label_replace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="33" column="186" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iot_vs_noniot_instances/out_temp/prediction-iot-noniot.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/merge_instances/testing-3month-tid.csv" />
-    <entry file="file://$PROJECT_DIR$/tools/weka_processing/weka_confusion_map/weka_confusion_map.py" />
-    <entry file="file://$PROJECT_DIR$/tools/weka_processing/csv/testing-3month-include-feb.csv">
+    <entry file="file://$PROJECT_DIR$/tools/instance_count/instance_count.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="904">
+          <caret line="101" column="51" lean-forward="false" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/instance_count/visuals/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_dev_instances/dev_instances.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="14" lean-forward="false" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_dev_instances/executesim/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/weka_processing/wekatools/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="890">
+          <caret line="200" column="21" lean-forward="false" selection-start-line="200" selection-start-column="4" selection-end-line="200" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/predict_instances/predict_instances.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/weka_processing/weka_processing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_state_instacnes/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_activity_time_measure/annotate_states/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/axes/_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="38" column="1" lean-forward="false" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_activity_time_measure/executesim/flowentries.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_activity_instances/executesim/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_activity_time_measure/executesim/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/merge_instances/merge_instance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iot_vs_noniot_instances/gen_iot_noniot_instances.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="41" column="53" lean-forward="false" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_activity_instances/out_temp/training-activity_amazonecho.csv.csv" />
+    <entry file="file://$PROJECT_DIR$/tools/split_instances/split_instances.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="61" column="8" lean-forward="false" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_activity_instances/out_temp/activity_lifx.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/split_activity_instance_by_dev/split_activity_instance_by_dev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_activity_time_measure/sim_flow_meter_read/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_activity_time_measure/instances/18-06-14.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_activity_instances/out_temp/testing-activity_amazonecho.arff">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-687">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/attribute_histogram/attribute_histogram.py">
+    <entry file="file://$PROJECT_DIR$/of_activity_instances/instances/18-06-26.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-662">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-3345">
+          <caret line="18" column="138" lean-forward="false" selection-start-line="18" selection-start-column="134" selection-end-line="18" selection-end-column="138" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/attribute_impact/accuracyrrse.txt.bak">
+    <entry file="file://$PROJECT_DIR$/of_activity_time_measure/of_volumetric_attribute_writer/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="409">
+          <caret line="72" column="13" lean-forward="false" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/predict_induvidual_instances/pedict-3month-feb-included.csv" />
-    <entry file="file://$PROJECT_DIR$/tools/predict_induvidual_instances/pedict-3month-test-without-feb.csv" />
     <entry file="file://$PROJECT_DIR$/tools/attribute_cost/attribute_cost.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/gen_confusion_matrix/gen_confusion_matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="36" column="52" lean-forward="false" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/attribute_impact/attribute_impact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-337">
-          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        <state relative-caret-position="525">
+          <caret line="35" column="72" lean-forward="false" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/attribute_impact/accuracyrrse.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/attribute_impact/wekatools/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="145" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/attribute_impact_precision_recall/accuracyrrse.txt" />
-    <entry file="file://$PROJECT_DIR$/tools/attribute_impact_precision_recall/attribute_impact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/attribute_impact_precision_recall/wekaout.tmp.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="179" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/of_state_instacnes/annotate_states/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="54" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/of_state_instacnes_new_activitybased/executesim/__init__.py">
+    <entry file="file://$PROJECT_DIR$/of_activity_instances/instances/18-06-14.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/of_state_instacnes/of_volumetric_attribute_writer/__init__.py">
+    <entry file="file://$PROJECT_DIR$/of_activity_instances/annotate_states/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="108" lean-forward="false" selection-start-line="24" selection-start-column="98" selection-end-line="24" selection-end-column="108" />
+        <state relative-caret-position="195">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="108" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/gen_confusion_matrix/gen_confusion_matrix.py">
+    <entry file="file://$PROJECT_DIR$/of_activity_time_measure/instances/18-06-26.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/of_dev_instances/instances/16-10-01.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="271" lean-forward="true" selection-start-line="1" selection-start-column="271" selection-end-line="1" selection-end-column="271" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/weka_processing/csv/non-IoT.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/daily_basis_testing/output.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/daily_basis_testing/daily_basis_testing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1109">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/merge_instances/merge_instance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/predict_induvidual_instances/predict_induvidual_instances.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/of_state_instacnes/state_instances.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="50" column="39" lean-forward="false" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/predict_induvidual_instances/pedict-first3month.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/filter_instances/filter_instances.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="31" column="121" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/split_state_instance_devices/csv_files/states_amazonecho.csv" />
-    <entry file="file://$PROJECT_DIR$/of_dev_instances/sim_flow_meter_read/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-290">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/of_dev_instances/of_volumetric_attribute_writer/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="59" column="32" lean-forward="false" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/find_n_replace/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="105" lean-forward="false" selection-start-line="50" selection-start-column="105" selection-end-line="50" selection-end-column="105" />
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/merge_pcaps/merge_pcaps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="87" lean-forward="false" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+        <state relative-caret-position="0">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/of_state_instacnes_new_activitybased/instances/18-06-14.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/merge_instances/all-activity-instances.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="296" lean-forward="false" selection-start-line="2" selection-start-column="296" selection-end-line="2" selection-end-column="296" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/epoch_to_localtime/epoch_to_local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" column="127" lean-forward="false" selection-start-line="24" selection-start-column="127" selection-end-line="24" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/of_state_instacnes_new_activitybased/sim_flow_meter_read/__init__.py">
+    <entry file="file://$PROJECT_DIR$/tools/plot_traffic/samples_amazonecho.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/of_state_instacnes_new_activitybased/sim_flow_info_read/__init__.py">
+    <entry file="file://$PROJECT_DIR$/of_activity_time_measure/instances/18-07-03.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="282">
+          <caret line="113315" column="10" lean-forward="false" selection-start-line="113315" selection-start-column="0" selection-end-line="113315" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/weka_processing/csv/amazonecho-testing.csv" />
-    <entry file="file://$PROJECT_DIR$/of_state_instacnes_new_activitybased/annotate_states/__init__.py">
+    <entry file="file://$PROJECT_DIR$/of_activity_time_measure/instances/18-06-17.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        <state relative-caret-position="134">
+          <caret line="86463" column="12" lean-forward="false" selection-start-line="86463" selection-start-column="9" selection-end-line="86463" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/of_state_instacnes_new_activitybased/of_volumetric_attribute_writer/__init__.py">
+    <entry file="file://$PROJECT_DIR$/of_activity_time_measure/read_activity_pattern.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="78" column="78" lean-forward="false" selection-start-line="78" selection-start-column="78" selection-end-line="78" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/split_state_instance_devices/csv_files/activity_amazonecho.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="153" lean-forward="true" selection-start-line="1" selection-start-column="153" selection-end-line="1" selection-end-column="153" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/weka_processing/wekatools/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-339">
-          <caret line="112" column="73" lean-forward="false" selection-start-line="112" selection-start-column="56" selection-end-line="112" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/of_state_instacnes_new_activitybased/state_instances.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/split_state_instance_devices/split_state_instance_devices.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="44" column="56" lean-forward="true" selection-start-line="44" selection-start-column="56" selection-end-line="46" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/of_state_instacnes_new_activitybased/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="88" column="23" lean-forward="false" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/split_instances/first_n_instances.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="136" column="29" lean-forward="false" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
+        <state relative-caret-position="825">
+          <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="22" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/weka_processing/weka_processing.py">
+    <entry file="file://$PROJECT_DIR$/tools/plot_traffic/samples_amazon-Idle.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="124" lean-forward="false" selection-start-line="13" selection-start-column="124" selection-end-line="13" selection-end-column="124" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_activity_time_measure/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/of_state_instacnes/config.py">
+    <entry file="file://$PROJECT_DIR$/tools/plot_traffic/plot_traffic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="387">
+          <caret line="78" column="48" lean-forward="false" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_activity_instances/of_volumetric_attribute_writer/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/of_dev_instances/dev_instances.py">
+    <entry file="file://$PROJECT_DIR$/of_activity_instances/activity_instances.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="35" column="38" lean-forward="false" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+        <state relative-caret-position="429">
+          <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/of_dev_instances/config.py">
+    <entry file="file://$PROJECT_DIR$/of_activity_instances/classify_activities.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="17" />
+        <state relative-caret-position="212">
+          <caret line="78" column="87" lean-forward="false" selection-start-line="78" selection-start-column="87" selection-end-line="78" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/attribute_histogram/attribute_histogram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="54" column="59" lean-forward="false" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/of_activity_instances/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iot_vs_noniot_instances/out_temp/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -5,7 +5,7 @@ def simple_merge_pcap(input_folder, output_filename):
     print(" ".join(["mergecap", "-w", output_filename, input_folder]))
     os.system(" ".join(["mergecap", "-w", output_filename, input_folder]))
 
-def merge_day_files(input_folder,output_filename): #Written by Ayyoob
+def merge_day_files(input_folder,output_filename): #Written by Ayyoob to merge wan,lan traffic of all flows
 
     simple_merge_pcap(input_folder,'%sx.pcap'%output_filename)
     command = "editcap -w 0.05 '%sx.pcap' '%s.pcap'" % (output_filename,output_filename)
@@ -17,7 +17,7 @@ def merge_day_files(input_folder,output_filename): #Written by Ayyoob
     return_code = subprocess.call(command, shell=True)
 
 if __name__ == "__main__":
-    pcap_list = ['/Users/Arunan/Documents/PCAP-Transfer/under_process/activity/18-06-22']
+    pcap_list = ['/Users/Arunan/Documents/PCAP-Transfer/under_process/18-06-17']
 
     for e_p in pcap_list:
         ep_without_space = e_p.replace(' ', '\ ')

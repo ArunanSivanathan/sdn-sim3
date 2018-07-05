@@ -51,7 +51,7 @@ if __name__=="__main__":
     bin_size=10
     xlimit = 10*1024
 
-    training_data, training_colkeys = extract_cols('../merge_instances/testing-march.csv', [95, -1])
+    training_data, training_colkeys = extract_cols('/Users/Arunan/Documents/coderepo/sdn-sim3/py-postprocess/of_dev_instances/data/1-merged-csv/training-3month-include-feb.csv', [95, -1])
     training_filtered_row = get_rows_by_value(training_data, -1, 12)
     training_attribute_values = training_filtered_row[0]
     training_attribute_values = [x for x in training_attribute_values if x > 0]

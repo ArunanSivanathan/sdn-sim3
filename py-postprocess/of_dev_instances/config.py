@@ -39,8 +39,6 @@ DEVICE_DICT = [
     {'mac': 'f4:5c:89:93:cc:85', 'class': '99', 'name': 'Non IoT'},
 ]
 
-INSTANCE_INTERVAL = 15
-
 GATE_WAY = '14:cc:20:51:33:ea'
 
 BUFFER = OrderedDict([('1minDNSDown', {'length': 1 , 'src': 'count', 'flow_col_name': 'mac2dns-down'}),

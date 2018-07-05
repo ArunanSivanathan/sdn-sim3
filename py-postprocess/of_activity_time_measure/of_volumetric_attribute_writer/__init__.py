@@ -1,7 +1,6 @@
 import csv
 from collections import deque
 
-import of_state_instacnes_new_activitybased.annotate_states as a_s
 
 
 class AttributeWriterException(Exception):
@@ -13,16 +12,14 @@ class AttributeWriterException(Exception):
 
 
 class OFVolumetricAttributeWriter:
-    def __init__(self, filename, lst_attributes, flow_info_dict=None, dev_class=None):
+    def __init__(self, filename, lst_attributes, flow_info_dict=None):
         self.filename = filename
         self.attributes = lst_attributes
         self.flow_info_dict = flow_info_dict
-        self.device_class = dev_class
+
         self.instance_interval = 1
         self.counter = 0
         self.last_known_time = None
-
-        self.state_annotator = a_s.AnnotateStates('/Users/Arunan/Documents/PCAP-Transfer/under_process/activity/activity_annotation.txt')
 
         self.fid = open(filename, 'w')
         self.csv_writer = csv.writer(self.fid)
@@ -44,7 +41,7 @@ class OFVolumetricAttributeWriter:
         headers.append('states')
         self.csv_writer.writerow(headers)
 
-    def put_reading(self,tid, line_rate, line_counter):
+    def put_reading(self,tid, line_rate, line_counter,labels):
         if self.flow_info_dict is None:
             raise AttributeWriterException('flow_info_dict is None')
 
@@ -63,23 +60,20 @@ class OFVolumetricAttributeWriter:
             self.attributes[attribute_name]['buffer'].append(val)
 
         if (self.counter % self.instance_interval) == 0:
-            self.write_row(tid)
+            self.write_row(tid,labels)
 
-    def write_row(self,tid):
-        if self.device_class is None:
-            raise AttributeWriterException('device class is None')
+    def write_row(self,tid,labels):
+        attribute_vector = [0] * len(self.attributes.keys())
 
-        attribute_vector = [0] * (len(self.attributes.keys()) + 2)
-        attribute_vector[-1] = self.state_annotator.annotate(self.device_class,tid)
-        attribute_vector[-2] = self.device_class
 
         for i,attribute_name in enumerate(self.attributes.keys()):
             attribute_vector[i] = sum(self.attributes[attribute_name]['buffer'])
 
-        if sum(attribute_vector[0:-2]) != 0:  # if it is not an empty instance
-            attribute_vector.insert(0,tid)
-            self.csv_writer.writerow(attribute_vector)
+        # if sum(attribute_vector[0:-2]) != 0:  # if it is not an empty instance
+        attribute_vector.insert(0,tid)
+        attribute_vector.extend(labels)
+        self.csv_writer.writerow(attribute_vector)
 
     def __del__(self):
-        self.write_row(self.last_known_time)
+        # self.write_row(self.last_known_time)
         self.fid.close()
