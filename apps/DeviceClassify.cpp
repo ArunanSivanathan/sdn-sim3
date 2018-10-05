@@ -30,8 +30,9 @@ DeviceClassify::toController(struct pPcap::packet_meta *p_m, const unsigned char
     return Controller::toController(p_m, packet, header);
 }
 
-void DeviceClassify::mirroredTraffic(int opt, const unsigned char *packet, struct pcap_pkthdr *header) {
-    Controller::mirroredTraffic(opt, packet, header);
+void
+DeviceClassify::mirroredTraffic(unsigned long pid, int opt, const unsigned char *packet, struct pcap_pkthdr *header) {
+    Controller::mirroredTraffic(pid, opt, packet, header);
 }
 
 

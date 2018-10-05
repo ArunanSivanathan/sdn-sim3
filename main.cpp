@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     resolution = 60;
     char **ctrloptv;
     int ctrloptc=0;
-
+    output_log="./";
 
     int c;
     while (1) {
@@ -43,6 +43,8 @@ int main(int argc, char *argv[]) {
                     printf(" with arg %s", optarg);
                 printf("\n");
                 break;
+            case 'o':
+                output_log = string(optarg);
             case 'r':
                 resolution = atoi(optarg);
                 break;

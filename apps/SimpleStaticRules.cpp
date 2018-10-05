@@ -1,5 +1,6 @@
 //
 // Created by Arunan Sivanathan on 3/5/18.
+// --verbose -r 60 "/Users/Arunan/Documents/PCAP-Transfer/under_process/activity/18-06-26.pcap" simplestatic -- --flowentries ../config/simplestatic_flows.txt
 //
 
 

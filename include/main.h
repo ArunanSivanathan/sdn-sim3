@@ -9,6 +9,7 @@
 
 int verboseFlag;
 int resolution;
+std::string output_log;
 
 struct option long_options[] =
         {
@@ -18,6 +19,7 @@ struct option long_options[] =
                 /* These options don’t set a flag.
                    We distinguish them by their indices. */
                 {"resolution",  required_argument, 0, 'r'},
+                {"output",  required_argument, 0, 'o'},
                 {0, 0, 0, 0}
         };
 

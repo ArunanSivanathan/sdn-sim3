@@ -26,7 +26,7 @@ public:
     ushort
     toController(struct pPcap::packet_meta *p_m, const unsigned char *packet, struct pcap_pkthdr *header) override;
 
-    void mirroredTraffic(int opt, const unsigned char *packet, struct pcap_pkthdr *header) override;
+    void mirroredTraffic(unsigned long pid, int opt, const unsigned char *packet, struct pcap_pkthdr *header) override;
     int readMacList(const char *filePath, char_vec_t *macList);
     void initiateDeviceIdentificationRules(const char* deviceMac,const char* gatewayMac);
 };

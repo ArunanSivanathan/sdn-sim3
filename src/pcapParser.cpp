@@ -5,7 +5,10 @@
 #include <pcap.h>
 #include <logistics.h>
 #include <cstdlib>
+#include <pcapParser.h>
+
 #include "pcapParser.h"
+
 
 char *pPcap::mac2str(u_char *mac) {
     const uint MAC_STR_LENGTH = 17;
@@ -80,6 +83,7 @@ struct in_addr pPcap::str2ip(const char *ipStr) {
 }
 
 void pPcap::runParser(char *pcapFile, void (*onNewPacket)(int, const unsigned char *, struct pcap_pkthdr *)) {
+    sim_pack new_packet;
     const unsigned char *packet;
     struct pcap_pkthdr header;
     int packetNo;
@@ -193,7 +197,6 @@ struct pPcap::l4_head *pPcap::getLayer4(pPcap::l3_head *l3Head) {
     check(l4Head, "layer 4 header memory allocation failed");
 
     if (l3Head->ip_p == IPPROTO_TCP) {
-
         if (l3Head->payload_len < sizeof(struct tcphdr)) {
             log_err("TCP header Corrupted");
             goto error;

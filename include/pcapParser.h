@@ -13,8 +13,19 @@
 #include <netinet/ip.h>
 #include <netinet/tcp.h>
 #include <netinet/udp.h>
+#include <string>
 
 namespace pPcap {
+
+    struct sim_pack{
+        unsigned long packet_id;
+        const unsigned char *packet;
+        struct pcap_pkthdr *header;
+        struct l2_head *lay_eth;
+        struct l3_head *lay_ip;
+        struct l4_head *lay_tp;
+    };
+
     struct packet_meta {
         //Frame
         u_char *ether_dhost;
@@ -95,6 +106,7 @@ namespace pPcap {
     struct packet_meta *
     createPacketMeta_frm_string(const char *ether_shost, const char *ether_dhost, const char *ether_type, const char *ip_tos,
                      const char *ip_p, const char *ip_src, const char *ip_dst, const char *sport, const char *dport);
+
 }
 
 

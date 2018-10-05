@@ -113,7 +113,7 @@ SwitchBox::takeaction(unsigned long pid, FlowRule *c_f, struct pPcap::packet_met
     }
     if (c_f->action & MIRROR_TRAFFIC) {
         //debug("%lu:\tPacket fwd to deep_analysis",pid);
-        this->mController->mirroredTraffic(c_f->opt, packet, header);
+        this->mController->mirroredTraffic(this->mPacketCount, c_f->opt, packet, header);
         this->mPacketMirrored += 1;
         this->mPacketFWD += 1;
         return 0;//Rematch the packets

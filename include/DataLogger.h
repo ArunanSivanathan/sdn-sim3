@@ -7,6 +7,7 @@
 
 
 #include <cstdio>
+#include "config.h"
 
 using namespace std;
 

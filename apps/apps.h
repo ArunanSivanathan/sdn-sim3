@@ -9,6 +9,7 @@
 #include <controller.h>
 #include "DeviceClassify.h"
 #include "SimpleStaticRules.h"
+#include "dnsParser.h"
 #include "config.h"
 #endif //SDN_SIM3_APPS_H
 namespace apps {

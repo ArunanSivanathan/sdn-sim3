@@ -11,7 +11,7 @@ ushort Controller::toController(struct pPcap::packet_meta *p_m, const unsigned c
     return 0;
 }
 
-void Controller::mirroredTraffic(int opt, const unsigned char *packet, struct pcap_pkthdr *header) {
+void Controller::mirroredTraffic(unsigned long pid, int opt, const unsigned char *packet, struct pcap_pkthdr *header) {
 
 }
 

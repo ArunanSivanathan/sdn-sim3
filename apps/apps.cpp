@@ -16,6 +16,8 @@ Controller *apps::getControllerApp(int ctrloptc, char *ctrloptv[]) {
         selectedController= new DeviceClassify(ctrloptc,ctrloptv);
     else if(strcmp(ctrloptv[0],"simplestatic") == 0)
         selectedController= new SimpleStaticRules(ctrloptc,ctrloptv);
+    else if(strcmp(ctrloptv[0],"dnsparser") == 0)
+        selectedController= new DNSParser(ctrloptc,ctrloptv);
     else {
         debug("App ID:%s not found. Loading default controller",ctrloptv[0]);
         selectedController = new Controller(ctrloptc,ctrloptv);

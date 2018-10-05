@@ -27,7 +27,7 @@ public:
 
     virtual ushort toController(struct pPcap::packet_meta *p_m, const unsigned char *packet, struct pcap_pkthdr *header);
 
-    virtual void mirroredTraffic(int opt, const unsigned char *packet,struct pcap_pkthdr *header);
+    virtual void mirroredTraffic(unsigned long pid, int opt, const unsigned char *packet, struct pcap_pkthdr *header);
 
     virtual void pushInitialRules();
 
