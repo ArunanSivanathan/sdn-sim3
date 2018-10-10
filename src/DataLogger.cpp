@@ -37,33 +37,42 @@ LogFile::~LogFile() {
 
 
 DataLogger::DataLogger() {
-    log_packet = new LogFile("./log_packets.csv", false);
+    std::string fname;
+    fname = output_log + "log_packets.csv";
+    log_packet = new LogFile(fname.c_str(), true);
     log_packet->writeLine("%s,%s,%s,%s,%s,%s,%s,%s,%s\n", "Packet ID", "TIME", "Size", "eth.src", "eth.dst", "IP.src",
                           "IP.dst", "IP.proto", "port.src", "port.dst");
 
-    log_flowEntry = new LogFile("./log_flowentries.csv", true);
+    fname = output_log + "log_flowentries.csv";
+    log_flowEntry = new LogFile(fname.c_str(), true);
     log_flowEntry->writeLine("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n",
                              "ID", "eth.src", "eth.dst", "IP.src", "IP.dst", "IP.proto",
                              "port.src", "port.src", "priority", "action", "packets", "bytes");
 
-    log_packetevent = new LogFile("./log_packetevents.csv", false);
+    fname = output_log + "log_packetevents.csv";
+    log_packetevent = new LogFile(fname.c_str(), false);
     log_packetevent->writeLine("%s,%s,%s,%s,%s,%s\n",
                                "No", "Packet Size", "Arrival",
                                "Waiting", "Service In", "Service Out");
 
-    log_event_traverse = new LogFile("./log_event_traverse.csv", false);
+    fname = output_log + "log_event_traverse.csv";
+    log_event_traverse = new LogFile(fname.c_str(), false);
     log_event_traverse->writeLine("%s,%s,%s\n","TIME","Packet ID","Event Type");
 
-    log_actions = new LogFile("./log_packet_actions.csv", true);
-    log_actions->writeLine("%s,%s,%s,%s\n","TIME","Packet ID","Packet Size","Match_Flow");
+    fname = output_log + "log_packet_actions.csv";
+    log_actions = new LogFile(fname.c_str(), true);
+    log_actions->writeLine("%s,%s\n","Packet ID","Match_Flow");
 
-    log_flowmatch = new LogFile("./log_packet_flowmatch.csv", true);
-    log_flowmatch->writeLine("%s,%s,%s,%s\n","TIME","Packet ID","Packet Size","Match_Flow");
+    fname = output_log + "log_packet_flowmatch.csv";
+    log_flowmatch = new LogFile(fname.c_str(), true);
+    log_flowmatch->writeLine("%s,%s\n","Packet ID","Match_Flow");
 
-    log_flowCountuse = new LogFile("./log_flowusage_packet.csv", true);
+    fname = output_log + "log_flowusage_packet.csv";
+    log_flowCountuse = new LogFile(fname.c_str(), true);
     log_flowCountuse->writeLine("%s,%s:%s,...,...\n","TIME","Flow ID","Packet count");
 
-    log_flowRateuse = new LogFile("./log_flowusage_data.csv", true);
+    fname = output_log + "log_flowusage_data.csv";
+    log_flowRateuse = new LogFile(fname.c_str(), true);
     log_flowRateuse->writeLine("%s,%s:%s,...,...\n","TIME","Flow ID","Packet count");
 
 }

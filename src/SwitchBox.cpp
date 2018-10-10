@@ -25,24 +25,27 @@ SwitchBox::SwitchBox(Controller *ctrl, DataLogger *dLogger, SimClock *sysClock) 
 
 }
 
-void SwitchBox::packetIn(unsigned int pNo, const unsigned char *packet, struct pcap_pkthdr *header) {
-    char *srcMac;
+void SwitchBox::packetIn(pPcap::sim_pack *new_packet) {
     FlowRule *fMatch;
     pPcap::packet_meta *c_m;
 
 
-    mSysClock->setCurrentTime(&(header->ts));
+    mSysClock->setCurrentTime(&(new_packet->header->ts));
 
-    c_m = pPcap::getPacketMeta(packet, header);
+    c_m = pPcap::getPacketMeta(new_packet); //This will parse upto level 4 and update new_packet as well
 
     if (c_m == nullptr) goto error;
+
+    if (mDataLogger->log_packet->mWriteEnable) log_packet(new_packet, c_m);
+
+
 
 
     fMatch = FlowRule::findMatchingRule(this->first_rule, c_m);
 
-    if (takeaction(pNo, fMatch, c_m, packet, header)) {
+    if (takeaction(fMatch, c_m, new_packet)) {
         fMatch = FlowRule::findMatchingRule(this->first_rule, c_m);
-        takeaction(pNo, fMatch, c_m, packet, header);
+        takeaction(fMatch, c_m, new_packet);
     }
     delete c_m;
 
@@ -56,6 +59,29 @@ void SwitchBox::packetIn(unsigned int pNo, const unsigned char *packet, struct p
     delete c_m;
     return;
 
+}
+
+void SwitchBox::log_packet(const pPcap::sim_pack *new_packet, const pPcap::packet_meta *c_m) const {
+    char *srcMac, *dstMac, *srcIP, *dstIP;
+
+    srcMac = pPcap::mac2str(c_m->ether_shost);
+    dstMac = pPcap::mac2str(c_m->ether_dhost);
+    srcIP = pPcap::ip2str(c_m->ip_src);
+    dstIP = pPcap::ip2str(c_m->ip_dst); //todo: need an optimum way to write this
+    mDataLogger->log_packet->writeLine("%lu,%lu,%d,%s,%s,%s,%s,%d,%d,%d\n",
+                                       new_packet->packet_id,
+                                       (long)new_packet->header->ts.tv_sec,
+                                       new_packet->header->caplen,
+                                       srcMac,
+                                       dstMac,
+                                       srcIP,
+                                       dstIP, c_m->ip_p, c_m->sport, c_m->dport);
+
+
+    free(srcMac);
+    free(dstMac);
+    free(srcIP);
+    free(dstIP);
 }
 
 FlowRule *SwitchBox::flowrulePush(unsigned int priority, struct pPcap::packet_meta *match,
@@ -72,30 +98,29 @@ FlowRule *SwitchBox::flowrulePush(unsigned int priority, struct pPcap::packet_me
 
 
 ushort
-SwitchBox::takeaction(unsigned long pid, FlowRule *c_f, struct pPcap::packet_meta *c_meta, const unsigned char *packet,
-                      struct pcap_pkthdr *header) {
+SwitchBox::takeaction(FlowRule *c_f, struct pPcap::packet_meta *c_meta, pPcap::sim_pack *new_packet) {
 
     this->mPacketCount += 1;
-    this->mDataCount += header->caplen;
+    this->mDataCount += new_packet->header->caplen;
 
 
     if (c_f == nullptr) {//No matching rule
 //      debug("%lu:\tPacket send to controller",pid);
-        ushort reMatch = this->mController->toController(c_meta, packet, header);
+        ushort reMatch = this->mController->toController(new_packet, c_meta);
         this->mPacketFWD2ctrl += 1;
         return reMatch;
     } else {
         c_f->meterPacket += 1;//Increase packet counter
-        c_f->meterData += header->caplen;//Increase data counter
+        c_f->meterData += new_packet->header->caplen;//Increase data counter
     }
 
 //    if (!(c_f->action & FWD_TO_CONTROLLER)) print_packet_action(pid,c_f->action,header);//To avoid
 
-    char *timestr = SimClockTime(&(header->ts)).getFormattedTime("%Y-%m-%d %H:%M:%S");
+//    char *timestr = SimClockTime(&(new_packet->header->ts)).getFormattedTime("%Y-%m-%d %H:%M:%S");
 
-    mDataLogger->log_actions->writeLine("%s,%lu,%d,%d\n", timestr, pid, header->caplen, c_f->action);
-    mDataLogger->log_flowmatch->writeLine("%s,%lu,%d,%d\n", timestr, pid, header->caplen, c_f->flowId);
-    delete timestr;
+    mDataLogger->log_actions->writeLine("%lu,%d\n", new_packet->packet_id, c_f->action);
+    mDataLogger->log_flowmatch->writeLine("%lu,%d\n", new_packet->packet_id, c_f->flowId);
+//    delete timestr;
 
     if (~(c_f->action) & DROP) {
         //debug("%lu:\tPacket Forwarded",pid);
@@ -107,13 +132,13 @@ SwitchBox::takeaction(unsigned long pid, FlowRule *c_f, struct pPcap::packet_met
     }
     if (c_f->action & FWD_TO_CONTROLLER) {
         //debug("%lu:\tPacket fwd to controller",pid);
-        ushort reMatch = this->mController->toController(c_meta, packet, header);
+        ushort reMatch = this->mController->toController(new_packet, c_meta);
         this->mPacketFWD2ctrl += 1;
         return reMatch;//Rematch the packets
     }
     if (c_f->action & MIRROR_TRAFFIC) {
         //debug("%lu:\tPacket fwd to deep_analysis",pid);
-        this->mController->mirroredTraffic(this->mPacketCount, c_f->opt, packet, header);
+        this->mController->mirroredTraffic(new_packet, c_f->opt);
         this->mPacketMirrored += 1;
         this->mPacketFWD += 1;
         return 0;//Rematch the packets
@@ -173,21 +198,21 @@ void SwitchBox::logFlowInformations() {
 
         delete (srcMac);
         delete (dstMac);
-//        delete (srcIP);
-//        delete (dstIP);
+        delete (srcIP);
+        delete (dstIP);
         c_f = c_f->rule_next;
     }
 }
 
-void SwitchBox::logSummary(){
-    fprintf(stdout,"\nSummary\n");
-    fprintf(stdout,"Total no of packets:\t%lu\n",mPacketCount);
-    fprintf(stdout,"Total data :\t%lu Bytes\n",mDataCount);
-    fprintf(stdout,"No of drop:\t%lu\n",mPacketDropped);
-    fprintf(stdout,"No of forwards:\t%lu\n",mPacketFWD);
-    fprintf(stdout,"No of forwards to controller:\t%lu\n",mPacketFWD2ctrl);
-    fprintf(stdout,"No of mirrored:\t%lu\n",mPacketMirrored);
-    fprintf(stdout,"Total flowrules:\t%d\n",mFlowRuleCount);
+void SwitchBox::logSummary() {
+    fprintf(stdout, "\nSummary\n");
+    fprintf(stdout, "Total no of packets:\t%lu\n", mPacketCount);
+    fprintf(stdout, "Total data :\t%lu Bytes\n", mDataCount);
+    fprintf(stdout, "No of drop:\t%lu\n", mPacketDropped);
+    fprintf(stdout, "No of forwards:\t%lu\n", mPacketFWD);
+    fprintf(stdout, "No of forwards to controller:\t%lu\n", mPacketFWD2ctrl);
+    fprintf(stdout, "No of mirrored:\t%lu\n", mPacketMirrored);
+    fprintf(stdout, "Total flowrules:\t%d\n", mFlowRuleCount);
 }
 
 SwitchBox::~SwitchBox() {
@@ -195,7 +220,7 @@ SwitchBox::~SwitchBox() {
     FlowRule *p_f;
 
     //Flush all flowlog by ticking the timer to next frame
-    if (FLUSH_END_LAST_SECONDS==true)
+    if (FLUSH_END_LAST_SECONDS == true)
         logFlowActivity(mSysClock->getUpTime() + 1);
     logFlowInformations();
     logSummary();

@@ -26,13 +26,13 @@ void DeviceClassify::pushInitialRules() {
 }
 
 ushort
-DeviceClassify::toController(struct pPcap::packet_meta *p_m, const unsigned char *packet, struct pcap_pkthdr *header) {
-    return Controller::toController(p_m, packet, header);
+DeviceClassify::toController(pPcap::sim_pack *new_packet, struct pPcap::packet_meta *p_m) {
+    return Controller::toController(new_packet, p_m);
 }
 
 void
-DeviceClassify::mirroredTraffic(unsigned long pid, int opt, const unsigned char *packet, struct pcap_pkthdr *header) {
-    Controller::mirroredTraffic(pid, opt, packet, header);
+DeviceClassify::mirroredTraffic(pPcap::sim_pack *new_packet, int opt) {
+    Controller::mirroredTraffic(new_packet, opt);
 }
 
 

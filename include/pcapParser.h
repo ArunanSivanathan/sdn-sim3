@@ -72,7 +72,7 @@ namespace pPcap {
         uint32_t payload_len;
     };
 
-    void runParser(char *pcapFile, void (*onNewPacket)(int, const unsigned char *, pcap_pkthdr *));
+    void runParser(char *pcapFile, void (*onNewPacket)(sim_pack *));
 
     struct l2_head *getLayer2(const unsigned char *packet, uint32_t packetSize);
 
@@ -80,7 +80,7 @@ namespace pPcap {
 
     struct l4_head *getLayer4(pPcap::l3_head *l3Head);
 
-    struct packet_meta *getPacketMeta(const unsigned char *packet, struct pcap_pkthdr *header);
+    struct pPcap::packet_meta *getPacketMeta(sim_pack *new_packet);
 
     u_short compMac(u_char *mac1, u_char *mac2);
 

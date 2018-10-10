@@ -25,9 +25,9 @@ public:
 
     void setMDataLogger(DataLogger *mDataLogger);
 
-    virtual ushort toController(struct pPcap::packet_meta *p_m, const unsigned char *packet, struct pcap_pkthdr *header);
+    virtual ushort toController(pPcap::sim_pack *new_packet, struct pPcap::packet_meta *p_m);
 
-    virtual void mirroredTraffic(unsigned long pid, int opt, const unsigned char *packet, struct pcap_pkthdr *header);
+    virtual void mirroredTraffic(pPcap::sim_pack *new_packet, int opt);
 
     virtual void pushInitialRules();
 

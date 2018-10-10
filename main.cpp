@@ -7,7 +7,7 @@
 #include "config.h"
 
 void displayBanner();
-void packetInWrapper(int p_no, const unsigned char *packet, struct pcap_pkthdr *header);
+void packetInWrapper(pPcap::sim_pack *new_packet);
 void timeTickCallback(uint32_t upTime, const SimClockTime *cTime);
 
 SwitchBox* serviceSwitch;
@@ -45,6 +45,7 @@ int main(int argc, char *argv[]) {
                 break;
             case 'o':
                 output_log = string(optarg);
+                break;
             case 'r':
                 resolution = atoi(optarg);
                 break;
@@ -109,12 +110,13 @@ void printAppUsage(){
     std::cerr<<"Controllers:"<<std::endl;
     std::cerr<<" ofdc\t\t\tOpenflow device classification"<<std::endl;
     std::cerr<<" simplestatic\tSimple static flows"<<std::endl;
+    std::cerr<<" dnsparser\tParse DNS packets"<<std::endl;
     exit(EXIT_FAILURE);
 }
 
-void packetInWrapper(int p_no, const unsigned char *packet, struct pcap_pkthdr *header)
+void packetInWrapper(pPcap::sim_pack *new_packet)
 {
-    serviceSwitch->packetIn(p_no,packet,header);
+    serviceSwitch->packetIn(new_packet);
 }
 
 void timeTickCallback(uint32_t upTime, const SimClockTime *cTime) {

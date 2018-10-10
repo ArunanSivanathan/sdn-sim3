@@ -82,11 +82,12 @@ struct in_addr pPcap::str2ip(const char *ipStr) {
     return ip;
 }
 
-void pPcap::runParser(char *pcapFile, void (*onNewPacket)(int, const unsigned char *, struct pcap_pkthdr *)) {
-    sim_pack new_packet;
-    const unsigned char *packet;
-    struct pcap_pkthdr header;
-    int packetNo;
+void pPcap::runParser(char *pcapFile, void (*onNewPacket)(sim_pack *)) {
+    sim_pack *new_packet = (sim_pack *)malloc(sizeof(sim_pack));
+
+//    const unsigned char *packet;
+    pcap_pkthdr* header = (pcap_pkthdr*)malloc(sizeof(pcap_pkthdr));
+//    int packetNo;
 
     char errbuf[PCAP_ERRBUF_SIZE];
     pcap_t *pcap;
@@ -96,21 +97,26 @@ void pPcap::runParser(char *pcapFile, void (*onNewPacket)(int, const unsigned ch
         goto error;
     }
 
+    new_packet->packet_id = 1;
+    new_packet->packet = pcap_next(pcap, header);
+    new_packet->header = header;
 
-    packetNo = 1;
-    packet = pcap_next(pcap, &header);
+    while (new_packet->packet) {// until packet variable gets NULL
 
-    while (packet) {// until packet variable gets NULL
+        (*onNewPacket)(new_packet);
 
-        (*onNewPacket)(packetNo, packet, &header);
-        packetNo++;
-        packet = pcap_next(pcap, &header);
+        new_packet->packet_id++;
+        new_packet->packet = pcap_next(pcap, header);
 
     }
 
+    delete(new_packet);
+    delete(header);
     return;
 
     error:
+    delete(new_packet);
+    delete(header);
     exit(1);
     return;
 }
@@ -239,13 +245,13 @@ struct pPcap::l4_head *pPcap::getLayer4(pPcap::l3_head *l3Head) {
     return nullptr;
 }
 
-struct pPcap::packet_meta *pPcap::getPacketMeta(const unsigned char *packet, struct pcap_pkthdr *header) {
+struct pPcap::packet_meta *pPcap::getPacketMeta(sim_pack *new_packet) {
     pPcap::l2_head *l2Head = nullptr;
     pPcap::l3_head *l3Head = nullptr;
     pPcap::l4_head *l4Head = nullptr;
     struct packet_meta *c_meta = nullptr;
 
-    l2Head = pPcap::getLayer2(packet, header->caplen);
+    l2Head = pPcap::getLayer2(new_packet->packet, new_packet->header->caplen);
     if (l2Head == nullptr) {
 //        log_warn("layer2 returned null");
         goto error;

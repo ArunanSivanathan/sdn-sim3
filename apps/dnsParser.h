@@ -143,11 +143,11 @@ public:
     void pushInitialRules() override;
 
     ushort
-    toController(struct pPcap::packet_meta *p_m, const unsigned char *packet, struct pcap_pkthdr *header) override;
+    toController(pPcap::sim_pack *new_packet, struct pPcap::packet_meta *p_m) override;
 
-    void mirroredTraffic(unsigned long pid, int opt, const unsigned char *packet, struct pcap_pkthdr *header) override;
+    void mirroredTraffic(pPcap::sim_pack *new_packet, int opt) override;
 
-    void parse(const unsigned char *packet, struct pcap_pkthdr *header);
+    void parse(pPcap::sim_pack *new_packet);
 };
 
 #endif //SDN_SIM3_DNSPARSER_H

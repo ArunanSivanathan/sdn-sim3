@@ -8,7 +8,7 @@
 
 DNSParser::DNSParser(int ctrloptc, char **ctrloptv) : Controller(ctrloptc, ctrloptv) {
     std::string ip_resolver_filename = output_log + "log_dns.csv";
-    this->dns_rev_resolve_log = new LogFile(ip_resolver_filename.c_str(),true);
+    this->dns_rev_resolve_log = new LogFile(ip_resolver_filename.c_str(), true);
     this->dns_rev_resolve_log->writeLine("%s,%s,%s\n", "Packet ID", "name", "rdata");
 }
 
@@ -31,25 +31,25 @@ void DNSParser::pushInitialRules() {
 }
 
 ushort
-DNSParser::toController(struct pPcap::packet_meta *p_m, const unsigned char *packet, struct pcap_pkthdr *header) {
-    return Controller::toController(p_m, packet, header);
+DNSParser::toController(pPcap::sim_pack *new_packet, struct pPcap::packet_meta *p_m) {
+    return Controller::toController(new_packet, p_m);
 }
 
-void DNSParser::mirroredTraffic(unsigned long pid, int opt, const unsigned char *packet, struct pcap_pkthdr *header) {
-    Controller::mirroredTraffic(pid, opt, packet, header);
+void DNSParser::mirroredTraffic(pPcap::sim_pack *new_packet, int opt) {
+    Controller::mirroredTraffic(nullptr, opt);
 
-    // to debug packet headers
-    pPcap::packet_meta *c_m;
-    c_m = pPcap::getPacketMeta(packet, header);
-    log_info("dns packet: %lu, %s,%s", pid, c_m->sport, c_m->dport);
+//     to debug packet headers
+//    pPcap::packet_meta *c_m;
+//    c_m = pPcap::getPacketMeta(new_packet);
+//    log_info("dns packet: %lu, %d,%d", new_packet->packet_id, c_m->sport, c_m->dport);
+
 
     //todo: write packet id, domain name and IP
-    parse(packet, header);
-
+    parse(new_packet);
 }
 
-void DNSParser::parse(const unsigned char *packet, struct pcap_pkthdr *header) {
-    DNSPayload *dns_payload;
+void DNSParser::parse(pPcap::sim_pack *new_packet) {
+    DNSPayload *dns_payload= nullptr;
     uint32_t payload_len;
     const unsigned char *payload;
 
@@ -57,7 +57,7 @@ void DNSParser::parse(const unsigned char *packet, struct pcap_pkthdr *header) {
     pPcap::l3_head *l3Head = nullptr;
     pPcap::l4_head *l4Head = nullptr;
 
-    l2Head = pPcap::getLayer2(packet, header->caplen);
+    l2Head = pPcap::getLayer2(new_packet->packet, new_packet->header->caplen);
     if (l2Head == nullptr) {
         //      log_warn("layer2 returned null");
         goto error;
@@ -70,7 +70,7 @@ void DNSParser::parse(const unsigned char *packet, struct pcap_pkthdr *header) {
     }
 
     if (l3Head->ip_p != IPPROTO_UDP) {
-        log_err("DNS packet parsing supports only on DNS");
+        log_err("DNS packet parsing supports only on UDP DNS");
         return;
     }
 
@@ -88,22 +88,40 @@ void DNSParser::parse(const unsigned char *packet, struct pcap_pkthdr *header) {
 //    for (int i = 0; i < dns_payload->m_v_questions.size(); i++)
 //        log_info("DNS Questions Found %s", dns_payload->m_v_questions[i].name.c_str());
 //
-    for (int i = 0; i < dns_payload->m_v_answers.size(); i++)
-        this->dns_rev_resolve_log->writeLine("%s,%s,%s\n", "Packet ID", "name", "rdata");
-        log_info("DNS Answers for %s : %s", dns_payload->m_v_answers[i].name.c_str(),
-                 dns_payload->m_v_answers[i].rdata.c_str());
+    for (int i = 0; i < dns_payload->m_v_answers.size(); i++) {
+
+        this->dns_rev_resolve_log->writeLine("%lu,%s,%s\n", new_packet->packet_id,
+                                             dns_payload->m_v_answers[i].name.c_str(),
+                                             dns_payload->m_v_answers[i].rdata.c_str());
+   }
+
+
+    for (int i = 0; i < dns_payload->m_v_authNS.size(); i++) {
+
+        this->dns_rev_resolve_log->writeLine("%lu,%s,%s\n", new_packet->packet_id,
+                                             dns_payload->m_v_authNS[i].name.c_str(),
+                                             dns_payload->m_v_authNS[i].rdata.c_str());
+    }
+
+
+    for (int i = 0; i < dns_payload->m_v_addRecs.size(); i++) {
+
+        this->dns_rev_resolve_log->writeLine("%lu,%s,%s\n", new_packet->packet_id,
+                                             dns_payload->m_v_addRecs[i].name.c_str(),
+                                             dns_payload->m_v_addRecs[i].rdata.c_str());
+    }
 //
 //    if (dns_payload->m_v_answers.size() > 1) {
 //        exit(EXIT_SUCCESS);
 //    }
 
-
+    delete(dns_payload);
     error:
+//    delete(dns_payload);
     delete l2Head;
     delete l3Head;
     delete l4Head;
 }
-
 
 
 DNSPayload::DNSPayload(const unsigned char *payload, uint32_t payload_len) {
@@ -157,7 +175,7 @@ DNSPayload::DNSPayload(const unsigned char *payload, uint32_t payload_len) {
     this->readRes(&m_v_answers, m_count_ans, payload, payload_len, &gbl_payload_point);
 
     /***Read authoritative ns***/
-    log_info("Reading authoritative ns");
+//    log_info("Reading authoritative ns");
 //    DEBUG_PAYLOAD(payload+gbl_payload_point,5);
     if (this->m_count_auth > 0 && payload_len - gbl_payload_point < 1) {
         throw std::length_error("DNS answers payload corrupted");
@@ -165,7 +183,7 @@ DNSPayload::DNSPayload(const unsigned char *payload, uint32_t payload_len) {
     this->readRes(&m_v_authNS, m_count_auth, payload, payload_len, &gbl_payload_point);
 
     /***Read additional records***/
-    log_info("Reading records");
+//    log_info("Reading records");
     if (this->m_count_rec > 0 && payload_len - gbl_payload_point < 1) {
         throw std::length_error("DNS answers payload corrupted");
     }

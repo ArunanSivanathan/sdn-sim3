@@ -11,62 +11,88 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b5cfa3-7df5-4df4-af31-19d1c35be6db" name="Default" comment="DNS parser is added">
-      <change afterPath="$PROJECT_DIR$/apps/dnsParser.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/dnsParser.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/IPaddress.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py-postprocess/iot_vs_noniot_instances/plot_generators/attribute_vs_iot_noniot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py-postprocess/of_activity_instances/plot_generators/attribute_vs_activity_hist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py-postprocess/of_dev_instances/classify_devices.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py-postprocess/of_dev_instances/plot_generators/attribute_vs_devices_hist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py-postprocess/of_uniwide_devices/executesim/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py-postprocess/of_uniwide_devices/merge_files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py-postprocess/of_uniwide_devices/read_activity_pattern.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py-postprocess/tools/attribute_merit/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py-postprocess/tools/attribute_merit/attribute_merit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py-postprocess/tools/plot_heatmap/plot_heatmap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IPaddress.cpp" afterDir="false" />
+    <list default="true" id="25b5cfa3-7df5-4df4-af31-19d1c35be6db" name="Default" comment="DNS parser app included">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/DeviceClassify.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/apps/DeviceClassify.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/DeviceClassify.h" beforeDir="false" afterPath="$PROJECT_DIR$/apps/DeviceClassify.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/SimpleStaticRules.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/apps/SimpleStaticRules.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/apps.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/apps/apps.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/apps.h" beforeDir="false" afterPath="$PROJECT_DIR$/apps/apps.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/DataLogger.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/DataLogger.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dnsParser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dnsParser.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dnsParser.h" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dnsParser.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/SwitchBox.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/SwitchBox.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/controller.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/logistics.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/logistics.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/main.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/pcapParser.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/pcapParser.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/.idea/py-postprocess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/.idea/py-postprocess.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/iot_vs_noniot_instances/gen_iot_noniot_instances.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/iot_vs_noniot_instances/gen_iot_noniot_instances.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_instances/classify_activities.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/of_activity_instances/classify_activities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_instances/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/of_activity_instances/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/.idea/py-postprocess.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/iot_vs_noniot_instances/gen_iot_noniot_instances.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/iot_vs_noniot_instances/out_temp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_instances/activity_instances.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_instances/annotate_states/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_instances/classify_activities.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_instances/config.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_instances/data/1-merged_data/readme.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_instances/data/2-device_specific_instances/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/of_dev_instances/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/of_dev_instances/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_cost/attribute_cost.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/tools/attribute_cost/attribute_cost.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_histogram/attribute_histogram.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/tools/attribute_histogram/attribute_histogram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_instances/executesim/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_instances/of_volumetric_attribute_writer/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_instances/sim_flow_info_read/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_instances/sim_flow_meter_read/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_time_measure/annotate_states/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_time_measure/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_time_measure/data/1-merged_data/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_time_measure/data/2-device_specific_instances/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_time_measure/executesim/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_time_measure/of_volumetric_attribute_writer/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_time_measure/read_activity_pattern.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_time_measure/sim_flow_info_read/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_activity_time_measure/sim_flow_meter_read/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_dev_instances/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_dev_instances/data/2-merged-arff/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_dev_instances/dev_instances.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_dev_instances/executesim/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_dev_instances/executesim/macaddresslist-dev_instances.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_dev_instances/of_volumetric_attribute_writer/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_dev_instances/sim_flow_info_read/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/of_dev_instances/sim_flow_meter_read/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_cost/attribute_cost.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_histogram/attribute_histogram.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_impact/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_impact/accuracyrrse.txt.bak" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_impact/attribute_impact.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_impact/wekatools/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_impact_precision_recall/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_impact_precision_recall/accuracyrrse.txt.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_impact_precision_recall/attribute_impact.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/tools/attribute_impact_precision_recall/attribute_impact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_impact_precision_recall/wekatools/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/tools/attribute_impact_precision_recall/wekatools/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/gen_confusion_matrix/gen_confusion_matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/tools/gen_confusion_matrix/gen_confusion_matrix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/instance_count/instance_count.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/tools/instance_count/instance_count.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/merge_pcaps/merge_pcaps.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/tools/merge_pcaps/merge_pcaps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/plot_traffic/plot_traffic.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/tools/plot_traffic/plot_traffic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_impact_precision_recall/attribute_impact.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/attribute_impact_precision_recall/wekatools/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/daily_basis_testing/daily_basis_testing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/daily_basis_testing/wekatools/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/directory_lister/list_dir.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/epoch_to_localtime/epoch_to_local.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/filter_instances/filter_instances.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/find_n_replace/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/gen_confusion_matrix/gen_confusion_matrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/instance_count/instance_count.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/instance_count/visuals/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/label_replace/label_replace.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/limit_pcap_time/limit_pcap_time.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/merge_instances/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/merge_instances/merge_instance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/merge_pcaps/merge_pcaps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/plot_traffic/plot_traffic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/predict_instances/predict_instances.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/split_activity_instance_by_dev/split_activity_instance_by_dev.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/split_instances/split_instances.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/weka_processing/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py-postprocess/tools/weka_processing/csv/testing-3month-include-feb.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py-postprocess/tools/weka_processing/csv/testing-3month-without-feb.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py-postprocess/tools/weka_processing/csv/training-3month-include-feb.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py-postprocess/tools/weka_processing/csv/training-3month-without-feb.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/weka_processing/wekatools/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/py-postprocess/tools/weka_processing/wekatools/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/weka_processing/weka_processing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py-postprocess/tools/weka_processing/wekatools/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataLogger.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataLogger.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SwitchBox.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwitchBox.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pcapParser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/pcapParser.cpp" afterDir="false" />
@@ -94,67 +120,59 @@
     <session id="-1834584888">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="35" />
-          <entry key="csv" value="4" />
-          <entry key="h" value="40" />
+          <entry key="cpp" value="51" />
+          <entry key="csv" value="20" />
+          <entry key="h" value="51" />
           <entry key="iosfwd" value="2" />
+          <entry key="new" value="1" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="76" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="ObjectiveC" value="104" />
+          <entry key="PLAIN_TEXT" value="20" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="4540" />
+          <entry key="cpp" value="5322" />
           <entry key="h" value="1172" />
-          <entry key="mm" value="63" />
-          <entry key="txt" value="27" />
+          <entry key="mm" value="134" />
+          <entry key="txt" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Doxygen file" value="2" />
-          <entry key="ObjectiveC" value="5773" />
-          <entry key="PLAIN_TEXT" value="27" />
+          <entry key="ObjectiveC" value="6626" />
+          <entry key="PLAIN_TEXT" value="42" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/dnsParser.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="37" column="115" selection-start-line="37" selection-start-column="89" selection-end-line="37" selection-end-column="115" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+            <state relative-caret-position="236">
+              <caret line="112" column="45" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -163,26 +181,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SwitchBox.cpp">
+        <entry file="file://$PROJECT_DIR$/apps/apps.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="158" selection-start-line="158" selection-end-line="158" />
-              <folding>
-                <element signature="e#114#574#0" />
-                <element signature="e#1311#1691#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/dnsParser.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="101" column="7" selection-start-line="101" selection-start-column="7" selection-end-line="101" selection-end-column="7" />
-              <folding>
-                <element signature="e#110#133#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="18" column="41" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -190,26 +192,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/pcapParser.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="19" column="19" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pcapParser.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="86" column="2" selection-start-line="86" selection-start-column="2" selection-end-line="86" selection-end-column="2" />
+            <state relative-caret-position="420">
+              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/config.h">
+        <entry file="file://$PROJECT_DIR$/include/SwitchBox.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            <state relative-caret-position="795">
+              <caret line="53" column="81" selection-start-line="53" selection-start-column="81" selection-end-line="53" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataLogger.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="e#51#70#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SimClock.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1200">
+              <caret line="80" column="14" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -237,6 +251,9 @@
       <find>DEBUG_PAYLOAD</find>
       <find>string</find>
       <find>exit</find>
+      <find>pPcap::sim_pack</find>
+      <find>sim_pack</find>
+      <find>null</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -260,22 +277,24 @@
         <option value="$PROJECT_DIR$/apps/apps.h" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.cpp" />
         <option value="$PROJECT_DIR$/apps/apps.cpp" />
-        <option value="$PROJECT_DIR$/src/controller.cpp" />
-        <option value="$PROJECT_DIR$/src/SwitchBox.cpp" />
-        <option value="$PROJECT_DIR$/apps/DeviceClassify.cpp" />
         <option value="$PROJECT_DIR$/apps/SimpleStaticRules.cpp" />
         <option value="$PROJECT_DIR$/include/logistics.h" />
         <option value="$PROJECT_DIR$/src/IPaddress.h" />
         <option value="$PROJECT_DIR$/src/IPaddress.cpp" />
         <option value="$PROJECT_DIR$/include/IPaddress.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/include/main.h" />
         <option value="$PROJECT_DIR$/include/config.h" />
         <option value="$PROJECT_DIR$/include/DataLogger.h" />
         <option value="$PROJECT_DIR$/apps/dnsParser.h" />
-        <option value="$PROJECT_DIR$/apps/dnsParser.cpp" />
         <option value="$PROJECT_DIR$/include/pcapParser.h" />
+        <option value="$PROJECT_DIR$/src/controller.cpp" />
+        <option value="$PROJECT_DIR$/apps/DeviceClassify.cpp" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/log_dns.csv" />
         <option value="$PROJECT_DIR$/src/pcapParser.cpp" />
+        <option value="$PROJECT_DIR$/apps/dnsParser.cpp" />
+        <option value="$PROJECT_DIR$/src/DataLogger.cpp" />
+        <option value="$PROJECT_DIR$/src/SwitchBox.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -287,10 +306,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-268" />
-    <option name="y" value="-1080" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -309,21 +326,6 @@
               <item name="sdn_sim3" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdn-sim3" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdn_sim3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdn-sim3" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdn_sim3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdn-sim3" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdn_sim3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdn-sim3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sdn_sim3" type="b2602c69:ProjectViewProjectNode" />
@@ -369,7 +371,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sdn_sim3" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--verbose -r 60 &quot;$PROJECT_DIR$/../../PCAP-Transfer/States/17-09-26.pcap&quot; dnsparser" PASS_PARENT_ENVS_2="true" PROJECT_NAME="sdn_sim3" TARGET_NAME="sdn_sim3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="sdn_sim3" RUN_TARGET_NAME="sdn_sim3">
+    <configuration name="sdn_sim3" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--verbose -r 60 &quot;$PROJECT_DIR$/../../PCAP-Transfer/States/17-09-26.pcap&quot; -o &quot;./&quot; dnsparser" PASS_PARENT_ENVS_2="true" PROJECT_NAME="sdn_sim3" TARGET_NAME="sdn_sim3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="sdn_sim3" RUN_TARGET_NAME="sdn_sim3">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -428,24 +430,35 @@
       <workItem from="1538617859542" duration="11246000" />
       <workItem from="1538657569592" duration="130000" />
       <workItem from="1538723305489" duration="3926000" />
-      <workItem from="1538734389391" duration="1572000" />
+      <workItem from="1538734389391" duration="6692000" />
+      <workItem from="1538750920544" duration="1638000" />
+      <workItem from="1538786308471" duration="1829000" />
+      <workItem from="1539144318893" duration="193000" />
     </task>
+    <task id="LOCAL-00001" summary="DNS parser app included">
+      <created>1538736159176</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1538736159176</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121472000" />
+    <option name="totallyTimeSpent" value="130252000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-268" y="-1080" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14802982" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15450644" />
       <window_info id="Structure" order="1" weight="0.24959481" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32871288" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3188119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2980198" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3180723" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.26987952" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -453,7 +466,7 @@
       <window_info anchor="bottom" id="CMake" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32574257" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3253012" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -473,8 +486,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="DNS parser is added" />
-    <option name="LAST_COMMIT_MESSAGE" value="DNS parser is added" />
+    <MESSAGE value="DNS parser app included" />
+    <option name="LAST_COMMIT_MESSAGE" value="DNS parser app included" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -488,48 +503,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/macaddresslist.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/macaddresslist-states.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimClock.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="121" column="32" selection-start-line="121" selection-start-column="32" selection-end-line="121" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/SimClock.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstring">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/string.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -543,17 +516,6 @@
           <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/log_flowentries.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="50" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/log_packet_flowmatch.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/config/simplestatic_flows.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -586,13 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/SwitchBox.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/SimpleStaticRules.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -604,13 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/sys/_types/_timeval.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -642,31 +590,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/DeviceClassify.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/netinet/in.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4706">
-          <caret line="307" column="56" lean-forward="true" selection-start-line="305" selection-start-column="8" selection-end-line="307" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/arpa/inet.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -677,13 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="123" column="11" selection-start-line="123" selection-start-column="11" selection-end-line="123" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/controller.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
@@ -698,14 +618,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#126#149#0" expanded="true" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/log_packet_actions.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
     <entry file="file:///usr/include/getopt.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -728,26 +642,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/apps.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/main.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="e#75#94#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log_dns.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/log_dns.csv" />
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/stdarg.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -755,24 +657,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/log_dns.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SwitchBox.cpp">
+    <entry file="file://$PROJECT_DIR$/include/config.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="158" selection-start-line="158" selection-end-line="158" />
-          <folding>
-            <element signature="e#114#574#0" />
-            <element signature="e#1311#1691#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/dnsParser.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="37" column="115" selection-start-line="37" selection-start-column="89" selection-end-line="37" selection-end-column="115" />
+        <state relative-caret-position="240">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -786,19 +674,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataLogger.cpp">
+    <entry file="file://$PROJECT_DIR$/include/controller.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/DeviceClassify.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="92" column="37" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/netinet/in.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/new">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="233" selection-start-line="233" selection-end-line="233" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/dnsParser.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/log_packet_flowmatch.csv">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="240">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/log_packet_actions.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/log_flowusage_packet.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/log_flowusage_data.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/log_flowentries.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/log_dns.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/include/i386/_types.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/sys/_types/_timeval.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/pcap/pcap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="163" column="16" selection-start-line="163" selection-start-column="16" selection-end-line="163" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pcapParser.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="50" />
-          <folding>
-            <element signature="e#51#70#0" expanded="true" />
-          </folding>
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/log_packets.csv">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="464">
+          <caret line="13174" column="6" lean-forward="true" selection-start-line="13174" selection-start-column="6" selection-end-line="13174" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/DataLogger.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
+        <state relative-caret-position="270">
           <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding>
             <element signature="e#113#130#0" expanded="true" />
@@ -806,41 +789,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/config.h">
+    <entry file="file://$PROJECT_DIR$/include/pcapParser.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        <state relative-caret-position="420">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/pcapParser.h">
+    <entry file="file://$PROJECT_DIR$/include/SwitchBox.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="795">
+          <caret line="53" column="81" selection-start-line="53" selection-start-column="81" selection-end-line="53" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataLogger.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#51#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimClock.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="80" column="14" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SwitchBox.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#114#574#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/apps.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+        <state relative-caret-position="236">
+          <caret line="112" column="45" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/pcap/pcap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="161" column="7" selection-start-line="161" selection-start-column="7" selection-end-line="161" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pcapParser.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="86" column="2" selection-start-line="86" selection-start-column="2" selection-end-line="86" selection-end-column="2" />
         </state>
       </provider>
     </entry>

@@ -22,13 +22,12 @@ public:
 
     virtual ~SwitchBox();
 
-    void packetIn(unsigned int  p_no, const unsigned char *packet, struct pcap_pkthdr *header);
+    void packetIn(pPcap::sim_pack *p_no);
 
     FlowRule *flowrulePush(unsigned int priority, pPcap::packet_meta *newMatch, enum ACTION_TYPE action,
                                   unsigned int opt);
 
-    ushort takeaction(unsigned long pid, FlowRule *c_f, struct pPcap::packet_meta *c_meta,
-                      const unsigned char *packet, struct pcap_pkthdr *header);
+    ushort takeaction(FlowRule *c_f, struct pPcap::packet_meta *c_meta, pPcap::sim_pack *new_packet);
 
     FlowRule *first_rule;
 
@@ -51,6 +50,8 @@ private:
 
 
     void logFlowInformations();
+
+    void log_packet(const pPcap::sim_pack *new_packet, const pPcap::packet_meta *c_m) const;
 };
 
 

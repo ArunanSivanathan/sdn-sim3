@@ -7,11 +7,11 @@
 Controller::Controller(int ctrloptc, char *ctrloptv[]) {
 }
 
-ushort Controller::toController(struct pPcap::packet_meta *p_m, const unsigned char *packet, struct pcap_pkthdr *header) {
+ushort Controller::toController(pPcap::sim_pack *new_packet, struct pPcap::packet_meta *p_m) {
     return 0;
 }
 
-void Controller::mirroredTraffic(unsigned long pid, int opt, const unsigned char *packet, struct pcap_pkthdr *header) {
+void Controller::mirroredTraffic(pPcap::sim_pack *new_packet, int opt) {
 
 }
 
