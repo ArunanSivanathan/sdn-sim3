@@ -10,7 +10,7 @@ SimClock::SimClock(void (*mTickCallBack)(uint32_t upTime,const SimClockTime* cTi
     this->mUpTime = 0;
     this->mTickCallBack = mTickCallBack;
     this->mClockUp = false;
-    this->mMaxClockDuration=100000;
+    this->mMaxClockDuration=365*24*60*60;
 }
 
 void SimClock::initializeTime(SimClockTime currentTime) {

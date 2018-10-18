@@ -10,6 +10,8 @@
 #include <cstring>
 #include <ctime>
 #include <cstdlib>
+#include <stdio.h>
+#include <stdlib.h>
 #include "config.h"
 #ifdef DNDEBUG
 #define debug(M, ...)

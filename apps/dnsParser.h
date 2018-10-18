@@ -31,6 +31,11 @@
     _PAYLOAD += _SIZE; \
     _LEN -= _SIZE;}
 
+
+
+
+
+
 extern std::string output_log;
 #define DEBUG_PAYLOAD(msg,payload,len){ fprintf(stdout,"%s: ",msg); for (int i = 0; i < len; i++) { \
 fprintf(stdout, "%02x\t", *(payload +i));}fprintf(stdout, "\n");}
@@ -128,6 +133,7 @@ public:
 
 class DNSParser : public Controller {
     LogFile* dns_rev_resolve_log;
+    LogFile* dns_qry_log;
 public:
     virtual ~DNSParser();
 

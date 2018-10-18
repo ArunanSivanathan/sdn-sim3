@@ -1,3 +1,5 @@
+#include <utility>
+
 //
 // Created by Arunan Sivanathan on 23/2/18.
 //
@@ -15,7 +17,20 @@
 #include <netinet/udp.h>
 #include <string>
 
+
+
 namespace pPcap {
+    class PacketCorruption: public std::exception {
+    private:
+        std::string message_;
+    public:
+        explicit PacketCorruption(std::string message): message_(std::move(message)) {};
+
+        virtual const char* what() const throw() {
+            return message_.c_str();
+        }
+    };
+
 
     struct sim_pack{
         unsigned long packet_id;

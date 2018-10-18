@@ -10,10 +10,15 @@ DNSParser::DNSParser(int ctrloptc, char **ctrloptv) : Controller(ctrloptc, ctrlo
     std::string ip_resolver_filename = output_log + "log_dns.csv";
     this->dns_rev_resolve_log = new LogFile(ip_resolver_filename.c_str(), true);
     this->dns_rev_resolve_log->writeLine("%s,%s,%s\n", "Packet ID", "name", "rdata");
+
+    std::string dns_quries_filename = output_log + "log_dns_quries.csv";
+    this->dns_qry_log = new LogFile(dns_quries_filename.c_str(), true);
+    this->dns_qry_log->writeLine("%s,%s\n", "Packet ID", "query");
 }
 
 DNSParser::~DNSParser() {
     delete this->dns_rev_resolve_log;
+    delete this->dns_qry_log;
 }
 
 void DNSParser::pushInitialRules() {
@@ -83,11 +88,25 @@ void DNSParser::parse(pPcap::sim_pack *new_packet) {
     payload = l4Head->payload;
     payload_len = l4Head->payload_len;
 
-    dns_payload = new DNSPayload(payload, payload_len);
+    try {
+        dns_payload = new DNSPayload(payload, payload_len);
+    } catch (pPcap::PacketCorruption& e){
+        log_err("DNS parser:%s",e.what());
+        delete(dns_payload);
+        goto error;
+    }
 
 //    for (int i = 0; i < dns_payload->m_v_questions.size(); i++)
 //        log_info("DNS Questions Found %s", dns_payload->m_v_questions[i].name.c_str());
 //
+    if (dns_payload->m_flags->qr == 0){
+        for (int i = 0; i < dns_payload->m_v_questions.size(); i++) {
+
+            this->dns_qry_log->writeLine("%lu,%s\n", new_packet->packet_id,
+                                                 dns_payload->m_v_questions[i].name.c_str());
+        }
+    }
+
     for (int i = 0; i < dns_payload->m_v_answers.size(); i++) {
 
         this->dns_rev_resolve_log->writeLine("%lu,%s,%s\n", new_packet->packet_id,
@@ -128,7 +147,7 @@ DNSPayload::DNSPayload(const unsigned char *payload, uint32_t payload_len) {
     uint32_t gbl_payload_point = 0;
 
     if (payload_len - gbl_payload_point < DNS_HEADER_SIZE) {
-        throw std::length_error("DNS header corrupted");
+        throw pPcap::PacketCorruption("DNS header corrupted");
     }
 
     this->m_transid = ntohs(*((unsigned short *) (payload + gbl_payload_point)));
@@ -164,13 +183,13 @@ DNSPayload::DNSPayload(const unsigned char *payload, uint32_t payload_len) {
 
     /***Read questions***/
     if (this->m_count_quries > 0 && payload_len - gbl_payload_point < 1) {
-        throw std::length_error("DNS quries payload corrupted");
+        throw pPcap::PacketCorruption("DNS quries payload corrupted");
     }
     this->readQueries(payload, payload_len, &gbl_payload_point);
 
     /***Read answers***/
     if (this->m_count_ans > 0 && payload_len - gbl_payload_point < 1) {
-        throw std::length_error("DNS answers payload corrupted");
+        throw pPcap::PacketCorruption("DNS answers payload corrupted");
     }
     this->readRes(&m_v_answers, m_count_ans, payload, payload_len, &gbl_payload_point);
 
@@ -178,14 +197,14 @@ DNSPayload::DNSPayload(const unsigned char *payload, uint32_t payload_len) {
 //    log_info("Reading authoritative ns");
 //    DEBUG_PAYLOAD(payload+gbl_payload_point,5);
     if (this->m_count_auth > 0 && payload_len - gbl_payload_point < 1) {
-        throw std::length_error("DNS answers payload corrupted");
+        throw pPcap::PacketCorruption("DNS answers payload corrupted");
     }
     this->readRes(&m_v_authNS, m_count_auth, payload, payload_len, &gbl_payload_point);
 
     /***Read additional records***/
 //    log_info("Reading records");
     if (this->m_count_rec > 0 && payload_len - gbl_payload_point < 1) {
-        throw std::length_error("DNS answers payload corrupted");
+        throw pPcap::PacketCorruption("DNS answers payload corrupted");
     }
     this->readRes(&m_v_addRecs, m_count_rec, payload, payload_len, &gbl_payload_point);
 
@@ -204,7 +223,7 @@ uint32_t DNSPayload::readQueries(const unsigned char *payload, uint32_t payload_
         qry.name = std::string(buff);
 
         if (payload_len - *gbl_payload_pointer < sizeof(struct QUESTION)) {
-            throw std::length_error("DNS queries corrupted");
+            throw pPcap::PacketCorruption("DNS queries corrupted");
         }
 
         qry.question.qtype = ntohs(*((unsigned short *) (payload + *gbl_payload_pointer)));
@@ -236,7 +255,7 @@ uint32_t DNSPayload::readRes(vector<RES_RECORD> *output_vect, unsigned short cou
         rec.name = std::string(buff);
 
         if (payload_len - *gbl_payload_pointer < sizeof(struct R_DATA)) {
-            throw std::length_error("DNS rec corrupted in Ans/AuthNS/AddRes");
+            throw pPcap::PacketCorruption("DNS rec corrupted in Ans/AuthNS/AddRes");
         }
 
         rec.resource.type = ntohs(*((unsigned short *) (payload + *gbl_payload_pointer)));
@@ -254,7 +273,7 @@ uint32_t DNSPayload::readRes(vector<RES_RECORD> *output_vect, unsigned short cou
 
 
         if (payload_len - *gbl_payload_pointer < rec.resource.data_len) {
-            throw std::length_error("DNS resource data corrupted in Ans/AuthNS/AddRes");
+            throw pPcap::PacketCorruption("DNS resource data corrupted in Ans/AuthNS/AddRes");
         }
 
 
@@ -275,7 +294,7 @@ uint32_t DNSPayload::readRes(vector<RES_RECORD> *output_vect, unsigned short cou
             rec.rdata = std::string(buff);
 
 //            if (*gbl_payload_pointer - initial_point != rec.resource.data_len) {
-//                throw std::length_error("DNS resource data length mismatch in Ans/AuthNS/AddRes");
+//                throw pPcap::PacketCorruption("DNS resource data length mismatch in Ans/AuthNS/AddRes");
 //            }
         }
 
