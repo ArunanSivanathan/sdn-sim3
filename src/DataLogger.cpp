@@ -44,7 +44,7 @@ DataLogger::DataLogger() {
                           "IP.dst", "IP.proto", "port.src", "port.dst");
 
     fname = output_log + "log_flowentries.csv";
-    log_flowEntry = new LogFile(fname.c_str(), false);
+    log_flowEntry = new LogFile(fname.c_str(), true);
     log_flowEntry->writeLine("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n",
                              "ID", "eth.src", "eth.dst", "IP.src", "IP.dst", "IP.proto",
                              "port.src", "port.src", "priority", "action", "packets", "bytes");
@@ -68,11 +68,11 @@ DataLogger::DataLogger() {
     log_flowmatch->writeLine("%s,%s\n","Packet ID","Match_Flow");
 
     fname = output_log + "log_flowusage_packet.csv";
-    log_flowCountuse = new LogFile(fname.c_str(), false);
+    log_flowCountuse = new LogFile(fname.c_str(), true);
     log_flowCountuse->writeLine("%s,%s:%s,...,...\n","TIME","Flow ID","Packet count");
 
     fname = output_log + "log_flowusage_data.csv";
-    log_flowRateuse = new LogFile(fname.c_str(), false);
+    log_flowRateuse = new LogFile(fname.c_str(), true);
     log_flowRateuse->writeLine("%s,%s:%s,...,...\n","TIME","Flow ID","Packet count");
 
 }

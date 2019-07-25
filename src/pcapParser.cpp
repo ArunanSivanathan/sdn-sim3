@@ -214,6 +214,8 @@ struct pPcap::l4_head *pPcap::getLayer4(pPcap::l3_head *l3Head) {
         l4Head->dport = ntohs(p_tcp->th_dport);
         l4Head->payload = l3Head->payload + p_tcp->th_off * 4;
         l4Head->payload_len = l3Head->payload_len - p_tcp->th_off * 4;
+
+
     } else if (l3Head->ip_p == IPPROTO_UDP) {
         if (l3Head->payload_len < sizeof(struct udphdr)) {
             log_err("UDP header Corrupted ");
@@ -226,10 +228,16 @@ struct pPcap::l4_head *pPcap::getLayer4(pPcap::l3_head *l3Head) {
         l4Head->dport = ntohs(p_udp->uh_dport);
         l4Head->payload = l3Head->payload + sizeof(struct udphdr);
         l4Head->payload_len = l3Head->payload_len - sizeof(struct udphdr);
+
+
     } else if (l3Head->ip_p == 0x1) {//Echo Ping
-//        log_warn("ICMP protocol not implemented");
-        goto error;
-        //Skip now
+
+        l4Head->sport = 0;
+        l4Head->dport = 0;
+        l4Head->payload = 0;
+        l4Head->payload_len = 0;
+
+
     } else if (l3Head->ip_p == 0x2) {//IGMP
 //        log_warn("IGMP protocol not implemented");
         goto error;

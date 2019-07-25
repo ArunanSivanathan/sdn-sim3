@@ -103,6 +103,7 @@ int SimpleStaticRules::readnPush(const char *filePath) {
     full_condition += ip_match_condition + delimiter_condition;
     full_condition += ip_match_condition + delimiter_condition;
     full_condition += integer_condition + delimiter_condition;
+    full_condition += integer_condition + delimiter_condition;
     full_condition += integer_condition;
     full_condition += "\\s*$";
 
@@ -138,6 +139,7 @@ int SimpleStaticRules::readnPush(const char *filePath) {
             const char* ip_dst = cm.str(7).c_str();
             const char* sport = cm.str(8).c_str();
             const char* dport = cm.str(9).c_str();
+            const char* priority = cm.str(10).c_str();
 
             r = pPcap::createPacketMeta_frm_string(s_mac, d_mac, ether_type,
                                                    ip_tos, ip_p, ip_src,
@@ -153,7 +155,8 @@ int SimpleStaticRules::readnPush(const char *filePath) {
 //            delete sport;
 //            delete dport;
 
-            getServiceSwitch()->flowrulePush(1 << 4, r, FORWARD, 0);
+
+            getServiceSwitch()->flowrulePush(std::strtol (priority, nullptr,10), r, FORWARD, 0);
 
             //for (unsigned i=0; i<cm.size(); ++i) {
             //    std::cerr << i <<"[" << cm[i] << "] "<<endl;
