@@ -1,1 +1,3 @@
-**/*.csv
+data/output/*
+.idea/*
+.DS_Store
